@@ -71,7 +71,7 @@
             <div id="bouton_moins"><p class="moins">-</p></div>
             <div id="bouton_plus"><p class="plus">+</p></div>
             <div id="informations">
-                <div class="button_2" id="curriculum_vitae"><a href="telechargement/Curriculum_vitæ_Guillaume_LIEBE.pdf">Télécharger mon CV</a></div>
+                <div class="button_2" id="curriculum_vitae"><a href="img/diplômes_et_certificats/diplomes_et_certificats.pdf">Visualiser mes diplômes<br>et mes certificats</a></div>
             </div>
             
             <section class="bienvenue">
@@ -213,7 +213,7 @@
                             <a href="https://guillaume-liebe.fr/p3/">
                             <img src="img/projet_3.jpg" alt="projet 3">                        
                             <div class="petit_rectangle">
-                                <h7>Réalisation d'une carte intéractive pour vélo.<br>Utilisation de l'API JCDecaux et Google Maps</h7>
+                                <h7>Réalisation d'une carte intéractive pour vélo.<br>Utilisation de l'API JCDecaux et Google Maps.</h7>
                             </div>
                             </a>
                         </div>
@@ -2730,17 +2730,17 @@
                     <div id="experiences"> 
                     <div class="col-md-3">  
                         <div id="cercle_2"><div class="line"></div></div>
-                        <div class ="positionnement_3">
-                            <div class="agencement_cadre_5">
-                            <div class="couleur_de_fond" data-delai="0">          
-                            <h5>2013</h5>
-                            <p> Concepteur 3D           
-                            Lycée professionnel «Les Portes de Chartreuse» Grenoble (38) stage,
-                            Création des ustensiles et plusieurs gâteaux de pâtisserie en 3D.  
-                            </p>
+                            <div class ="positionnement_3">
+                                <div class="agencement_cadre_5">
+                                <div class="couleur_de_fond" data-delai="0">          
+                                <h5>2013</h5>
+                                <p> Concepteur 3D           
+                                Lycée professionnel «Les Portes de Chartreuse» Grenoble (38) stage,
+                                Création des ustensiles et plusieurs gâteaux de pâtisserie en 3D.  
+                                </p>
+                            </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                         <div id="cercle"><div class="line"></div><div class="line_2"></div> 
                     </div>
@@ -2754,15 +2754,15 @@
                 <div class="positionnement_2">
                     <div class="col-md-3">   
                         <div id="cercle_2"><div class="line"></div></div>       
-                        <div class="agencement_cadre_6">
-                            <div class="couleur_de_fond" data-delai="0">          
-                            <h5>2012</h5>
-                            <p>Concepteur 3D             
-                            Lycée professionnel «Les Portes de Chartreuse» Grenoble (38) stage,
-                            Réalisation d’un laboratoire de pâtisserie en 3D.
-                            </p>
+                            <div class="agencement_cadre_6">
+                                <div class="couleur_de_fond" data-delai="0">          
+                                <h5>2012</h5>
+                                <p>Concepteur 3D             
+                                Lycée professionnel «Les Portes de Chartreuse» Grenoble (38) stage,
+                                Réalisation d’un laboratoire de pâtisserie en 3D.
+                                </p>
+                                </div>
                             </div>
-                        </div>
                         </div>
                             <div id="cercle"><div class="line"></div><div class="line_2"></div>    
                         </div>
@@ -2776,21 +2776,21 @@
                     <div id="experiences"> 
                     <div class="col-md-3">  
                         <div id="cercle_2"><div class="line"></div></div>
-                        <div class ="positionnement_3">
-                            <div class="agencement_cadre_7">
-                            <div class="couleur_de_fond" data-delai="0">          
-                            <h5>2007 - 2009</h5>
-                            <p>Apprenti à la Mairie de Saint-Étienne (42),<br /> <br />                                                                                                                                                  
-                                <b>Infographiste service Logistique :</b> Création de panneaux publicitaires, flyers, affiches, bandeaux,             
-                                annonces  presses, 3 volets, prospectus, cartes de visite, habillages de blogs, signalétiques,             
-                                créations de supports CD, DVD.<br /><br />
+                            <div class ="positionnement_3">
+                                <div class="agencement_cadre_7">
+                                    <div class="couleur_de_fond" data-delai="0">          
+                                    <h5>2007 - 2009</h5>
+                                    <p>Apprenti à la Mairie de Saint-Étienne (42),<br /> <br />                                                                                                                                                  
+                                        <b>Infographiste service Logistique :</b> Création de panneaux publicitaires, flyers, affiches, bandeaux,             
+                                        annonces  presses, 3 volets, prospectus, cartes de visite, habillages de blogs, signalétiques,             
+                                        créations de supports CD, DVD.<br /><br />
 
-                                <b>Webdesigner service multimédia :</b> Mise à jour du site internet et extranet de la Ville de Saint-Étienne, 
-                                site internet Musée d’art et d’Industrie, Musée d’art Moderne.
-                            </p>
+                                        <b>Webdesigner service multimédia :</b> Mise à jour du site internet et extranet de la Ville de Saint-Étienne, 
+                                        site internet Musée d’art et d’Industrie, Musée d’art Moderne.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
                     </div>
                         <div id="cercle"><div class="line_2"></div> 
                     </div>
@@ -2811,24 +2811,31 @@
 
             if(isset($_POST) && isset ($_POST['nom']) && isset($_POST['email']) && isset($_POST['message']))
             {
-                extract($_POST);
-                if(!empty($nom) && !empty($email) && !empty($message))
-                {
-                    $message = str_replace("\'","'",$message);
-                    $destinataire = 'From:"liebeguillaume3d@hotmail.com"<support@liebeguillaume3d@hotmail.com>'."\n";
-                    $sujet = "Formulaire de contact";
-                    $msg = "
-                    Nom : $nom \n
-                    Email : $email \n
-                    Message : $message";
-                    $entete ="From : $nom \n Reply-To: $email";
-                    mail($destinataire, $sujet, $msg, $entete);
+                $header="MIME-Version: 1.0\r\n";
+                $header.='From:"guillaume-liebe.fr"<support@guillaume-liebe.fr>'."\n";
+                $header.='Content-Type:text/html; charset="uft-8"'."\n";
+                $header.='Content-Transfer-Encoding: 8bit';
+        
+                $message='
+                <html>
+                    <body>
+                            <br />
+                            <b>Nom de l\'expéditeur :</b> '.$_POST['nom'].'<br />
+                            <b>Mail de l\'expéditeur :</b> '.$_POST['email'].'<br />
+                            <br />
+                            <b>Message de l\'expéditeur :</b> '.nl2br($_POST['message']).'
+                            <br />
+                    </body>
+                </html>
+                ';
+        
+                mail("liebeguillaume3d@hotmail.com", "CONTACT - Monsite.com", $message, $header);
                     $envoie = "Votre email à bien été envoyé !";
                 }
                 else {
                     $erreur = "Vous n'avez pas rempli tous les champs...";
             }
-        }
+
         ?>
 
         <section id="formulaire_contact">
@@ -2887,8 +2894,8 @@
                 <a href="mentions_legales.html">Mentions Légales</a></p>
                 <div class="agencement_icones">
                     <div id="touch"><a href="https://www.linkedin.com/in/guillaume-liebe-22308a88/"><div class="icone_1"></div></a></div>
-                    <div id="touch"><a href="https://www.youtube.com/watch?v=Xh4cdrVuHhQ"><div class="icone_2"></div></a></div>
-                    <div id="touch"><a href="http://https://www.youtube.com/channel/UCzn2GYpsCi6eRpkRcAWhjLA"><div class="icone_3"></div></a></div>
+                    <div id="touch"><a href="https://github.com/Guillaume-Liebe"><div class="icone_2"></div></a></div>
+                    <div id="touch"><a href="https://www.youtube.com/channel/UCzn2GYpsCi6eRpkRcAWhjLA"><div class="icone_3"></div></a></div>
                 </div>
             </div>
         </footer>
