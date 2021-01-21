@@ -15,6 +15,13 @@
     margin-top: 20px;
 }
 
+.navbar-inverse 
+{
+    position: absolute;
+    background-color: #2222224a;
+    border-color: #080808;
+}
+
 .navbar-inverse .navbar-brand 
 {
     color: #ffffff;
@@ -88,17 +95,18 @@ nav a:hover
     text-align: center;
 }
 
-.sous_deroulant
+.sous_deroulant 
 {
     position: absolute;
     display: none;
     background-color: #222;
     border: black 1px solid;
     border-radius: 10px;
-    margin-left: -15px;
+    margin-left: -12px;
     width: 100%;
     padding-left: 0px;
     z-index: 1000;
+    margin-top: 0px;
 }
 
 li:hover .sous_deroulant
@@ -149,7 +157,6 @@ li:hover .sous_deroulant
 {
     font-size: 40px;
     color: #e4e4e4;
-    background-color: #ffffff21;
     padding: 10px;
     border-radius: 5px;
     visibility: hidden;
@@ -175,6 +182,13 @@ li:hover .sous_deroulant
 .btn:hover 
 {
     border-bottom: none;
+    background-color: unset;
+    border-left: unset;
+}
+
+.btn-info:hover 
+{
+    border-color: #f0f8ff00;
 }
 
 .open>.dropdown-menu 
@@ -192,14 +206,6 @@ li:hover .sous_deroulant
     margin-right: 20px;
 }
 
-header
-{
-    background-image: url("../img/developpeur.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 1100px;
-}
-
 /*Logo LG*/
 #logo
 {
@@ -212,13 +218,16 @@ header
     margin-bottom: 20px;
 }
 
-/*Bandeau du haut*/
+/*Prénom | Nom | Web développeur | Infographie | Concepteur 3D*/
+.prenom_liebe
+{
+    font-size: 50px;
+    margin-bottom: -40px;
+}
+
 header
 {
-    background-image: url("../img/developpeur.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 1100px;
+    display: contents;
 }
 
 .texte_menu_header
@@ -226,10 +235,33 @@ header
     font-family: "Rightland";
     position: absolute;
     color: white;
-    margin-top: 45px;
+    margin-top: 10px;
     margin-left: 200px;
     font-size: 25px;
     letter-spacing: 2px;
+}
+
+/*Bandeau d'accueil*/
+.bandeau_accueil
+{
+    background-image: url("../img/developpeur.jepg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+}
+
+/*Phrase d'accroche bandeau*/
+.phrase_accroche
+{
+    font-size: 35px;
+    letter-spacing: 2px;
+    color: white;
+    line-height: 45px;
+    font-weight: bold;
+    text-shadow: #000000 0px 1px 14px;
+    text-transform: initial;
+    padding-top: 220px;
+    margin-bottom: 50px;
 }
 
 /*Textes sur bandeau*/
@@ -250,6 +282,26 @@ img
     cursor: crosshair;
 }
 
+.container-fluid-tarifs .row 
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+.row-2 
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+}
+
+.container-fluid-tarifs img
+{
+    width: 100%;
+    cursor: auto;
+}
+
 /*Sections des rubriques*/
 section
 {
@@ -258,12 +310,47 @@ section
     padding: 0px;
 }
 
-/*Télécharger mon cv*/
-#bouton_moins 
+/*Visualiser mes diplômes et mes certificats*/
+#bouton_visualiser 
+{
+    text-align: center;
+    background-color: rgb(152, 0, 0);
+    font-size: 17px;
+    z-index: 1;
+    border-radius: 50px;
+    margin-bottom: 75px;
+    padding-right: 25px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*border-color: #ffffff;*/
+}
+
+#bouton_visualiser:hover
+{
+    background-color: rgb(181, 0, 0);
+}
+
+#bouton_visualiser a
+{
+    color: white;
+}
+
+.btn-info 
+{
+    border-color: #ffffff00;
+}
+
+#display_none
+{
+    display: none;
+}
+
+/*#bouton_moins 
 {
     margin-top: 15%;
-    right: 156px;
-    position: fixed;
+    right: 179px;
+    position: absolute;
     height: 72px;
     border-radius: 15px;
     cursor: pointer;
@@ -278,7 +365,7 @@ section
     margin-top: -18px;
     background-color: rgb(152, 0, 0);
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 12px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     z-index: 1;
@@ -295,7 +382,7 @@ section
 {
     margin-top: 15%;
     right: 0px;
-    position: fixed;
+    position: absolute;
     height: 72px;
     cursor: pointer;
     visibility: hidden;
@@ -322,15 +409,10 @@ section
     z-index: 1;
 }
 
-#display_none
-{
-    display: none;
-}
-
 #informations
 {
     margin-top: 15%;
-    position: fixed;
+    position: absolute;
     right: 0;  
     z-index: 1;
 }
@@ -341,18 +423,6 @@ section
     padding-left: 0px;
     padding-right: 0px;
     border-radius: 8px;
-}
-
-#curriculum_vitae 
-{
-    padding: 21.5px;
-    padding-left: 12px;
-    padding-right: 15px;
-    margin-right: -5px;
-    margin-top: -18px;
-    background-color: rgb(189, 0, 0);
-    font-size: 15px;
-    z-index: 1;
 }
 
 #informations :hover
@@ -373,7 +443,7 @@ section
 {
     color: white;
     text-decoration: none;
-}
+}*/
 
 /*Photo_de_profil*/
 .profil
@@ -385,11 +455,16 @@ section
 
 .profil img
 {
-    µ
     border-radius: 50%;
     width: 300px;
-    margin-left: -200px;
-    margin-top: -40px;
+}
+
+/*Textes Profil*/
+.col-md-7 
+{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    text-align: justify;
 }
 
 /*Animations flèches scroll*/
@@ -481,11 +556,19 @@ to {
 .col-md-8 p 
 {
     color:#3e3e3e;
+    font-size: 20px;
 }
 
 .col-md-8 h3 
 {
     padding-top: 250px;
+}
+
+/*Textes compétences*/
+a 
+{
+    color: #c3b848;
+    text-decoration: none;
 }
 
 /*Titre de niveau I*/
@@ -498,7 +581,7 @@ h1
 h2 
 {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     text-shadow: 0px 5px 15px black;
 }
 
@@ -506,14 +589,15 @@ h2
 h3 
 {
     font-family: "Rightland";
+    color: #333333;
     font-size: 70px;
     letter-spacing: 10px;
     text-align: center;
-    padding-top: 380px;
     font-weight: bold;
     opacity: 0;
     position: relative;
     top: 50px;
+    margin-top: 40px;
 }
 
 /*Titre de niveau IV*/
@@ -540,7 +624,6 @@ h6
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 3px; 
-    text-align: center;
 }
 
 /*Titre de niveau VII*/
@@ -553,10 +636,17 @@ h7
     letter-spacing: 2px;
 }
 
+/*Textes (Paragraphes)*/
+p 
+{
+    color: #3e3e3e;
+    font-size: 20px;
+}
+
 /*Empêche le soulignement du texte en HOVER*/
 a:focus, a:hover 
 {
-    color: #23527c;
+    color:#c3b848;
     text-decoration: none;
 }
 
@@ -608,11 +698,25 @@ a:focus, a:hover
     margin-bottom: 15px;
 }
 
+.bloc-1 img, .bloc-2 img, .bloc-3 img
+{
+    cursor: pointer;
+}
+
+.bloc-1
+{
+    background-color: #3e3e3ec4;
+    border-radius: 10px;
+    padding: 20px 20px 20px;
+    box-shadow: 0px 0px 5px #cbc04b99;
+    margin-bottom: 15px;
+}
+
 .bloc-2
 {
     background-color: #3e3e3ec4;
-    border-radius: 5px;
-    padding: 20px 20px;
+    border-radius: 10px;
+    padding: 20px 20px 20px;
     box-shadow: 0px 0px 5px #cbc04b99;
     margin-bottom: 15px;
 }
@@ -620,8 +724,8 @@ a:focus, a:hover
 .bloc-3
 {
     background-color: #3e3e3ec4;
-    border-radius: 5px;
-    padding: 20px 20px 40px;
+    border-radius: 10px;
+    padding: 20px 20px 20px;
     box-shadow: 0px 0px 5px #cbc04b99;
     margin-bottom: 15px;
 }
@@ -641,13 +745,14 @@ a:focus, a:hover
     margin-bottom: 25px;
     letter-spacing: 3px;
     margin-top: -10px;
+    opacity: 0;
 }
 
 /*Ligne horizontale à gauche et à droite du titre de niveau III*/
 h3:before, h3:after 
 {
     content:'';
-    width:4em;
+    width:15%;
     border-bottom:rgb(189 0 0) 5px solid;
     display:inline-block;
     vertical-align:middle;
@@ -741,56 +846,54 @@ progress::-moz-progress-bar
 	z-index: 10;
 }
 
-
 /*Grandes photos de séparations des contenus*/
-#immeuble
+#bandeau_projets
 {
-    background-image: url("../img/immeuble.png");
+    background-image: url("../img/bandeau_images.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    height: 1000px;
+    height: 370px;
 }
 
-#galaxie
+#bandeau_competences
 {
-    background-image: url("../img/Belle_Galaxy_nuit_paysage.png");
+    background-image: url("../img/mug_steam_table_122769_1920x1080.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    height: 1170px;
+    height: 370px;
 }
 
-#desert
+#bandeau_tarifs 
 {
-    background-image: url("../img/desert.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    height: 1200px;
-    margin-top: -50px;
-    margin-bottom: -450px;
-}
-
-#thailande_rochers 
-{
-    background-image: url("../img/thailande_rochers.png");
+    background-image: url("../img/chip_processor_circuit_145282_1400x1050.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: -300px;
-    height: 1300px;
-}
-
-#cascade 
-{
-    background-image: url("../img/cascade_arc.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: -400px;
+    margin-top: 100px;
     height: 1560px;
-    margin-bottom: -700px;
+    height: 370px;
+}
+
+#tarifs 
+{
+    background-image: url("../img/tarifs.jpg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    height: 1570px;
+}
+
+#bandeau_contact 
+{
+    background-image: url("../img/keyboard_telephone_desktop_179668_2560x1600.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 100px;
+    height: 1560px;
+    height: 370px;
 }
 
 /* Colonnes Web, Infographie, Conception 3D, digital arts, vidéos => PORTFOLIO*/
@@ -815,7 +918,7 @@ button
     padding-right: 35px;
     margin-right: -3px;
     border: none;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     outline : none;
 }
 
@@ -832,7 +935,7 @@ button
     margin-left: -138px;
 }
 
-#bord_arrondi_haut
+.bord_arrondi_haut
 {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -872,7 +975,7 @@ button .bord_arrondi_bas :hover
 {
     display: inline-block;
     margin-top: 40px;
-    margin-left: 8px;
+    margin-left: 43px;
     height: 0;
     width: 0;
     border-left: 150px solid transparent;
@@ -950,6 +1053,7 @@ button .bord_arrondi_bas :hover
 #portfolio
 {
     padding:0px;
+    opacity: 0;
 }
 
 #portfolio img 
@@ -1005,6 +1109,82 @@ button .bord_arrondi_bas :hover
     flex-direction: column;
 }
 
+/*Flèche précédent*/
+.fa-arrow-alt-circle-left:before 
+{
+    content: "\f359";
+    color: #ea3a3a;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#precedent_galaxy_tacos, #precedent_iasgenerations, #precedent_laboratoire_de_patisserie, #precedent_couverture_magazines, 
+#precedent_habillages_blogs, #precedent_labels_ville_verte, #precedent_etiquettes_de_vin, #precedent_batiment_design
+{
+    margin-top: -125px;
+    margin-bottom: 25px;
+}
+
+#precedent_titanic, #precedent_titanic_2, #precedent_harley_davidson, #precedent_harley_davidson_2, #precedent_laboratoire_de_patisserie_1, 
+#precedent_laboratoire_de_patisserie_2, #precedent_laboratoire_de_patisserie_3, #precedent_vehicule_1, #precedent_vehicule_2
+{
+    margin-top: -175px;
+    margin-bottom: 125px;
+}
+
+#precedent_petit_cuisinier, #precedent_ustensiles_patisserie
+{
+    margin-top: -450px;
+    margin-bottom: 25px;
+}
+
+#precedent_ford_mustang, #precedent_pagani_zonda, #precedent_can_am
+{
+    margin-top: -320px;
+    margin-bottom: 25px;
+}
+
+#precedent_patisseries_1, #precedent_patisseries_2
+{
+    margin-top: -210px;
+    margin-bottom: 125px;
+}
+
+#precedent_salon, #precedent_fond_des_mers, #precedent_cuisine, #precedent_f15_eagle
+{
+    margin-top: -550px;
+    margin-bottom: 25px;
+}
+
+/*Textes alignées Compétences*/
+.alignements_textes
+{
+    text-align: start;
+}
+
+/*Icones et textes alignements flex*/
+.flex_icones_textes
+{
+    display: flex;
+}
+
+.flex_icones_textes img 
+{
+    width: 120px;
+    height: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    margin-right: 20px;
+    cursor: unset; 
+}
+
+.flex_icones_textes
+p 
+{
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 #SkillBox 
 {
@@ -1014,7 +1194,7 @@ button .bord_arrondi_bas :hover
     height: auto;
     margin: 40px auto;
     background-color: #fff;
-    //border: 1px solid #cdcdcd;
+    border: 1px solid #cdcdcd;
     padding: 10px;
     border-radius:20px;
     -o-border-radius:20px;
@@ -1038,6 +1218,7 @@ button .bord_arrondi_bas :hover
     background: linear-gradient(#777, #9d9d9dad);
     margin: 20px auto;
     border-radius: 150px;
+    text-align: start;
 }
 
 #Skill-HTML 
@@ -1051,6 +1232,7 @@ button .bord_arrondi_bas :hover
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-HTML {
@@ -1090,6 +1272,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-CSS {
@@ -1130,6 +1313,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-jQuery {
@@ -1168,6 +1352,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-JS {
@@ -1208,6 +1393,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-XML {
@@ -1247,6 +1433,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-C {
@@ -1286,6 +1473,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-JAVA 
@@ -1327,6 +1515,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-PHP {
@@ -1366,6 +1555,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-SQL {
@@ -1406,6 +1596,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-VBNET {
@@ -1445,6 +1636,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-VBNET {
@@ -1484,6 +1676,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-VBNET {
@@ -1523,6 +1716,7 @@ to {
     position: absolute;
     background: linear-gradient(#d43a37, #d43a37, #d43a37);
     border-radius: 150px;
+    padding-top: 1px;
 }
 
 @keyframes Animate-VBNET {
@@ -1554,13 +1748,11 @@ to {
 .Skill-Area 
 {
     z-index: 1;
-    float: left;
-    //position: absolute;
     margin-top: 3px;
-    margin-left: 15px;
+    margin-left: 20px;
     text-shadow: none;
     color: #fff;
-    //font-family: Lato-Regular, sans-serif;
+    font-family: Lato-Regular, sans-serif;
     font-size: 18px;
 }
 
@@ -1568,12 +1760,12 @@ to {
 {
     z-index: 3;
     position: relative;
+    padding-top: 2px;
     padding-right: 15px;
-    margin-top: 3px;
     float: right;
     text-shadow: none;
     color: #fff;
-    //font-family: Lato-Regular, sans-serif;
+    font-family: Lato-Regular, sans-serif;
     font-size: 18px;
 }
 
@@ -1581,6 +1773,7 @@ to {
 {
     width: 100%;
     visibility: visible;
+    margin-top: -75px;
 }
 
 #infographie
@@ -3410,7 +3603,7 @@ to {
 #conception_3d_2
 {
     width: 100%;
-    margin-top: -437px;
+    margin-top: -390px;
     margin-bottom: -201px;
     visibility: hidden;
 }
@@ -3906,7 +4099,7 @@ to {
 {
     width: 100%;
     visibility: hidden;
-    margin-top: -900px;
+    margin-top: -800px;
 }
 
 #digital_arts_tour_de_babel_agrandi_1
@@ -3993,7 +4186,7 @@ to {
 {
     width: 100%;
     visibility: hidden;
-    margin-top: -900px;
+    margin-top: -800px;
 }
 
 video
@@ -4661,433 +4854,218 @@ video
     background-color: #bd0000;
 }
 
+/*Bouton devis*/
+.devis img 
+{
+    width: 300px;
+    cursor: pointer;
+}
+
 /*Scrolls sur les pages*/
 #page-1
 {
-    margin-bottom: -50px;
+    margin-bottom: 0px;
     scroll-behavior: smooth;
 }
 
 #page-2
 {
-    margin-bottom: -530px;
+    margin-bottom: 0px;
     scroll-behavior: smooth;
 }
 
 #page-3
 {
-    margin-bottom: -630px;
+    margin-bottom: 0px;
     scroll-behavior: smooth;
 }
 
 #page-4
 {
-    margin-bottom: -630px;
+    margin-bottom: 0px;
     scroll-behavior: smooth;
 }
 
 #page-5
 {
-    margin-bottom: -180px;
+    margin-bottom: 0px;
     scroll-behavior: smooth;
-}
-
-#page-6
-{
-    margin-bottom: -960px;
-    scroll-behavior: smooth;
-}
-
-/* Section Compétences et formations*/
-.titre_competences, .titre_formations
-{
-    margin-bottom: 200px;
-    color: #333333;
-}
-
-.titre_experiences 
-{
-    padding-top: 220px;
-    margin-bottom: 200px;
-    color: #333333;
-}
-
-#competences #formations #experiences
-{
-    margin-top: 200px;
-    color: black;
-}
-
-/*Système de cadres + cercles + lignes*/
-.couleur_de_fond 
-{
-    background-color: #ffffff;
-    color: rgb(45 45 45);
-    border-radius: 7px;
-    /* border: #222 1px solid; */
-    padding: 20px;
-    margin-top: -80px;
-    line-height: 22px;
-    text-align: left;
-    box-shadow: 0 10px 10px #9E9E9E;
-    opacity: 0;
-}
-
-/*Taille textes cadres*/
-p 
-{
-    font-size: 120%;
-}
-
-.col-md-8 p 
-{
-    margin: 0;
-    font-size: 20px;
-    margin-left: -120px;
-    margin-right: -200px;
-    /* text-align: left;*/
-}
-
-.col-md-3 
-{
-    float: right;
-    margin-right: 20.5%;
-    margin-top: -25px;
-}
-
-.line
-{
-    position: absolute;
-    background-color: #636363;
-    height: 180px;
-    width: 2px;
-    margin-left: 14px;
-    z-index: -1;
-}
-
-.line_2
-{
-    position: absolute;
-    background-color: #636363;
-    height: 2px;
-    width: 110px;
-    margin-left: -80px;
-    margin-top: 15px;
-    z-index: -1;
-    
-}
-
-.ligne
-{
-    visibility: hidden;
-}
-
-#cercle
-{
-    height: 33px;
-    width: 34px;
-    border-radius: 50%;
-    margin-left: 50%;
-    margin-bottom: 150px;
-    background-color: #303030;
-    border: 3px solid #bd0000;
-}
-
-#cercle_2 .line 
-{
-    height: 0px;
-    margin-top: -50px; 
-}
-
-#cercle_3 .line 
-{
-    visibility: hidden;
-}
-
-.alignement
-{
-    display: flex;
-}
-
-.position
-{
-    margin-top: -20px;
-}
-
-.positionnement_1 .col-md-3 
-{
-    float: left;
-    margin-left: 22%;
-    margin-top: -30px;
-}
-
-.positionnement_1 .couleur_de_fond 
-{
-    margin-top: -100px;
-    text-align: end;
-}
-
-.positionnement_2 .line_2 
-{
-    position: absolute;
-    background-color: #636363;
-    height: 2px;
-    width: 120px;
-    margin-left: 0px;
-    margin-top: 15px;
-    z-index: -1;
-}
-
-.positionnement_3 .couleur_de_fond 
-{
-    margin-top: -82px;
-}
-
-.agencement_cadre_1 
-{
-    margin-top: 10px;
-}
-
-.agencement_cadre_2
-{
-    margin-top: 0px;
-}
-
-.agencement_cadre_3 
-{
-    margin-top: -35px;
-}
-
-.agencement_cadre_4
-{
-    margin-top: 0px;
-}
-
-#formations .agencement_cadre_1 
-{
-    margin-top: 65px;
-}
-
-#formations .agencement_cadre_2
-{
-    margin-top: 45px;
-}
-
-#formations .agencement_cadre_3 
-{
-    margin-top: 30px;
-}
-
-#formations .agencement_cadre_4
-{
-    margin-top: 25px;
-}
-
-#formations .agencement_cadre_5 
-{
-    margin-top: 50px;
-}
-
-#formations .agencement_cadre_6
-{
-    margin-top: 25px;
-}
-
-#formations .agencement_cadre_7
-{
-    margin-top: 50px;
-}
-
-#experiences .agencement_cadre_1 
-{
-    margin-top: 72px;
-}
-
-#experiences .agencement_cadre_2
-{
-    margin-top: 50px;
-}
-
-#experiences .agencement_cadre_3
-{
-    margin-top: 40px;
-}
-
-#experiences .agencement_cadre_4
-{
-    margin-top: 20px;
-}
-
-#experiences .agencement_cadre_5
-{
-    margin-top: 45px;
-}
-
-#experiences .agencement_cadre_6
-{
-    margin-top: 20px;
-}
-
-#experiences .agencement_cadre_7
-{
-    margin-top: 50px;
-}
-
-/*Titre contact*/
-.contact 
-{
-    padding-top: 450px;
 }
 
 /*Formulaire de contact*/
-#formulaire_contact
+.contact-form
 {
-    margin-right: 22.5%;
-    margin-bottom: 100px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    margin: 50px 0 50px;
+    width: 500px;
+    text-align: center;
 }
 
-form
+.contact-form input
 {
-
-    margin-left: 30%;
-    margin-right: 0%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: block;
+    width: 90%;
+    margin: 0px 0px 20px 22px;
+    padding: 10px;
 }
 
-table 
+.contact-form textarea
 {
-    display: flex;
-    justify-content: center;
+    width: 90%;
+    margin: 0px 20px 20px 22px;
+    padding: 10px;
+    height: 200px;
 }
 
-tbody 
+.envoyer
 {
-    display: flex;
-    background: linear-gradient(180deg, #868686, #353535);
-    padding-bottom: 130px;
-    padding-left: 170px;
-    padding-top: 60px;
-    padding-right: 80px;
-    box-shadow: 1px 11px 20px 5px #9E9E9E;
+    cursor:pointer;
+    width: 150px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: white;
+    background: linear-gradient(180deg,#bd0000, #980000);
     border-radius: 5px;
-    opacity: 0;
+    border: none;
 }
 
-.xdebug-error
+.envoyer:hover
 {
-    display: none;
+    background: linear-gradient(180deg,#c71414, #d00505);
 }
 
-td
+/*Icones formulaire de contact*/
+.fa, .fab, .fad, .fal, .far, .fas 
 {
-    padding-top: 20px;
+    color: #333333;
+    font-size: 16px;
+    margin-left: 20px;
 }
 
-form p 
+/*Textes formulaire*/
+label 
 {
-    color:white;
-    margin-left: -272px;
-    margin-top: -10px;
-    text-shadow: #1d1d1d 0.1em 0.1em 0.2em;
+    letter-spacing: 1.5px;
+    color: #333333;
 }
 
 input
 {
-    width: 250px;
-    color:black;
+    border-left: #bd0000 3px solid;
+    border: 0;
+}
+
+form
+{
+    background: linear-gradient(180deg,#afafaf, #7d7d7d);
+    text-align: start;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 651px;
+}
+
+#nom
+{
+    color: #8c0000;
+    border-left: #bd0000 3px solid;
+    border-top: #616161 1px solid;
+    border-bottom: #616161 1px solid;
+    border-right: #616161 1px solid;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#email
+{
+    color: #8c0000;
+    border-left: #bd0000 3px solid;
+    border-top: #616161 1px solid;
+    border-bottom: #616161 1px solid;
+    border-right: #616161 1px solid;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#objet
+{
+    color: #8c0000;
+    border-left: #bd0000 3px solid;
+    border-top: #616161 1px solid;
+    border-bottom: #616161 1px solid;
+    border-right: #616161 1px solid;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+textarea 
+{
+    color: #8c0000;
     padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: -20px;
     padding-left: 10px;
-    font-size: 15px;
+    margin-left: 75px;
+    resize: unset;
+    border-left: #bd0000 3px solid;
+    border-top: #616161 1px solid;
+    border-bottom: #616161 1px solid;
+    border-right: #616161 1px solid;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*Formulaire de contact*/
+.contact-coordonnees
+{
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    background-color: #efefef;
+    margin: 50px 0 50px;
+    width: 450px;
+    height: 650px;
+    text-align: center;
+}
+
+table
+{
+    margin-left: 50px;
+    margin-right: auto;
+    text-align: start;
+    color: #333333;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.container-formulaire 
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
 }
 
 /*Icones name*/
 .fa-user:before 
 {
     content: "\f007";
-    margin-left: 80px;
-}
-
-#nom
-{
-    color: #8c0000;
-    margin-left: -90px;
-    border: 0;
 }
 
 /*Icones email*/
 .fa-at:before 
 {
     content: "\f1fa";
-    margin-left: 17px;
-}
-
-#email
-{
-    color: #8c0000;
-    margin-left: -90px;
-    border: 0;
-}
-
-
-textarea 
-{
-    color: #8c0000;
-    border: 0;
-    padding-top: 10px;
-    padding-left: 10px;
-    margin-left: 75px;
-    resize: unset;
 }
 
 /*Icones message*/
 .fa-envelope:before 
 {
     content: "\f0e0";
-    margin-left: 18px;
-}
-
-#message 
-{
-    color:white;
-    margin-left: -220px;
-}
-
-#envoyer
-{
-    color: #222222;
-    padding-left: 60px;
-    padding-bottom: 15px;
 }
 
 /*Icones envoyer*/
 .fa-telegram-plane:before 
 {
     content: "\f3fe";
-    position: absolute;
-    margin-left: -10px;
-    margin-top: 22px;
-}
-
-
-#cadre
-{
-    position: absolute;
-    width: 150px;
-    font-size: 16px;
-    font-family: sans-serif;
-    color: white;
-    background: linear-gradient(180deg,#bd0000, #980000);
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-left: -30px;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: none;
 }
 
 /*Bas de pages*/
@@ -5096,22 +5074,29 @@ footer
     display: flex;
     justify-content: center;
     background-color: rgb(37, 37, 37);
-    height: 120px;
+    border-top: #191919 20px solid;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 footer p
 {
     color: rgb(255, 255, 255);
-    letter-spacing: 1px;
-    padding-top: 50px;
-    margin-left: 195px;
-    font-size: 16px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .agencement_footer
 {
     display: flex;
 } 
+
+.agencement_footer a 
+{
+    font-size: 17px;
+}
 
 .agencement_icones
 {
@@ -5127,19 +5112,21 @@ footer p
     width: 200px;
     height: 50px;
     margin-left: 50px;
-    margin-top: 38px;
+    margin-top: auto;
+    margin-bottom: auto;
     z-index: 2;
 }
 
 .icone_2
 {
-    background-image: url("../img/facebook.png");
+    background-image: url("../img/github.png");
     background-repeat: no-repeat;
     background-size: 46px;
     width: 200px;
     height: 50px;
     margin-left: -130px;
-    margin-top: 38px;
+    margin-top: auto;
+    margin-bottom: auto;
     z-index: 2;    
 }
 
@@ -5148,10 +5135,11 @@ footer p
     background-image: url("../img/youtube.png");
     background-repeat: no-repeat;
     background-size: 46px;
-    width: 200px;
+    width: 100px;
     height: 50px;
     margin-left: -130px;
-    margin-top: 38px;
+    margin-top: auto;
+    margin-bottom: auto;
     z-index: 2;
 }
 
@@ -5161,35 +5149,50 @@ footer p
 }
 
 /*Mentions légales*/
+
+.mentions .navbar-inverse 
+{
+    position: absolute;
+    background-color: #222222;
+    border-color: #080808;
+}
+
 #mentions
 {
-    margin-top: -180px;
+    margin-top: 50px;
     margin-left: 12%;
     margin-right: 12%;
+    text-align: start;
+}
+
+#mentions h4 
+{
+    font-size: 28px;
+    line-height: 45px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    color: #3e3e3e;
+    text-align: start;
 }
 
 /*Couleur envoie du mail (formulaire)*/
 #envoie
 {
-    position: absolute;
-    color: #00b900;
-    font-size: 15px; 
-    margin-top: 87px;
-    margin-left: 165px;
-    letter-spacing: 0.5px;
-    text-shadow: #1d1d1d 0.1em 0.1em 0.2em;
+    color: #00ff5a;
+    font-size: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Couleur champs pas rempli (formulaire)*/
 #erreur
 {
-    position: absolute;
     color: red;
-    font-size: 15px; 
-    margin-top: 87px;
-    margin-left: 130px; 
-    letter-spacing: 0.5px;
-    text-shadow: #1d1d1d 0.1em 0.1em 0.2em;
+    font-size: 15px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
   /*Revenir en haut de la page (Scroll) */
@@ -5244,7 +5247,6 @@ footer p
     -o-transition: 0.5s; 	
 }
 
-
 /*Responsive Design*/
 
 @media (min-width: 2560px)
@@ -5272,6 +5274,33 @@ footer p
         margin-top: 65px;
     }
 
+    .phrase_accroche 
+    {
+        font-size: 50px;
+        padding-top: 350px;
+    }
+
+    /*Bouton visualiser*/
+    #bouton_visualiser 
+    {
+        font-size: 30px;
+        border-radius: 100px;
+        /*margin-bottom: -150px;*/
+        padding-right: 60px;
+        padding-left: 60px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /*border-color: #ffffff;*/
+    }
+
+    /*Bandeau d'accueil*/
+    .bandeau_accueil 
+    {
+        background-size: 100%;
+        height: 1500px;
+        margin-top: -50px;
+    }
+
     /*Logo LG*/
     #logo 
     {
@@ -5279,11 +5308,16 @@ footer p
         height: 175px;
     }
 
+    .prenom_liebe 
+    {
+        font-size: 70px;
+        margin-bottom: -60px;
+    }
+
     /*Texte menu Header*/
     .texte_menu_header 
     {
-        margin-top: 50px;
-        font-size: 30px;
+        font-size: 40px;
     }
 
     /*Sous menu déroulant (Menu)*/
@@ -5298,71 +5332,29 @@ footer p
         padding: 28px;
     }
 
-    /*Bouton curriculum vitae*/
-    #curriculum_vitae 
-    {
-        padding: 30px;
-        padding-left: 25px;
-        padding-right: 25px;
-        margin-right: -5px;
-        margin-top: -90px;
-        font-size: 25px;
-    }
-
-    .moins 
-    {
-        color: white;
-        font-size: 85px;
-        margin-top: -90.5px;
-        background-color: rgb(152, 0, 0);
-        padding-left: 15px;
-        padding-right: 17px;
-        padding-top: 26.5px;
-        padding-bottom: 30.5px;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
-        z-index: 1;
-    }
-
-    #bouton_moins 
-    {
-        margin-top: 15%;
-        right: 271px;
-        position: fixed;
-        height: 72px;
-        border-radius: 15px;
-        cursor: pointer;
-        visibility: visible;
-        z-index: 1;
-    }
-
-    .plus 
-    {
-        color: white;
-        font-size: 75px;
-        margin-top: -90px;
-        background-color: rgb(152, 0, 0);
-        padding-left: 27px;
-        padding-right: 27px;
-        border-bottom-left-radius: 5px;
-        border-top-left-radius: 5px;
-        z-index: 1;
-        padding-top: 31px;
-        padding-bottom: 26px;
-    }
-
     /*Texte accroche bandeau*/
     .textes_accroche
     {
-        margin-top: 150px;
         letter-spacing: 2px;
+        font-size: 25px;
+    }
+
+    /*Textes paragraphes*/
+    p 
+    {
+        font-size: 30px;
+    }
+
+    /*Titre de niveau II*/   
+    h2 
+    {
+        font-size: 40px;
     }
 
     /*Titre de niveau III*/   
     h3 
     {
-        font-size: 80px;
-        padding-top: 550px;
+        font-size: 120px;
     }
 
     /*Titre de niveau IV*/
@@ -5374,93 +5366,33 @@ footer p
     }
 
     /*Titre de niveau V*/
-    h5 
+    h5
     {
         font-size: 45px;
     }
 
-    /*Titre Guilaume Liebe*/
-    .bienvenue h3 
+    /*Titre de niveau VI*/
+    h6 
     {
-        font-size: 280%;
-        margin-bottom: -200px;
+        font-size: 38px;
     }
 
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
+    /*Sous titres*/
+    .sous-titre 
     {
-        margin-top: 45%;
-        height: 1200px;
-        margin-bottom: -400px;
+        font-size: 70px;
     }
 
-    #galaxie 
+    /*Images Icones*/
+    img
     {
-        margin-top: 250px;
-        height: 1570px;
-        margin-bottom: -600px;
-    }
-
-    #desert 
-    {
-        margin-top: 500px;
-    }
-
-    #thailande_rochers 
-    {
-        height: 1450px;
-    }
-
-    #cascade 
-    {
-        height: 1770px;
-        margin-top: -500px;
-        background-size: 100.1%;
-        margin-bottom: 400px;
+        width: 180px;
     }
 
     /*Photo_de_profil*/
-    #profil img 
+    .profil img 
     {
-        width: 110%;
-        padding-right: 150px;
-    }
-
-    /*Scrolls sur les pages*/
-    #page-1
-    {
-        margin-bottom: 50px;
-        scroll-behavior: smooth;
-    }
-
-    #page-2
-    {
-        margin-bottom: -675px;
-        scroll-behavior: smooth;
-    }
-
-    #page-3
-    {
-        margin-bottom: -870px;
-        scroll-behavior: smooth;
-    }
-
-    #page-4
-    {
-        margin-bottom: -720px;
-        scroll-behavior: smooth;
-    }
-
-    #page-5
-    {
-        margin-bottom: 50px;
-        scroll-behavior: smooth;
-    }
-
-    #page-6 
-    {
-        margin-bottom: -1260px;
-        scroll-behavior: smooth;
+        width: 400px;
     }
 
     /*Portfolio*/
@@ -5561,189 +5493,21 @@ footer p
         margin-top: -750px;
     }
 
-    h6 
-    {
-        font-size: 28px;
-    }
-
     /*Section Compétences et formations*/
     .titre_competences 
     {
         margin-bottom: 450px;
     }
 
-    /*Titre formations*/
-    .titre_formations 
+    /*Devis tarifs*/
+    .devis img 
     {
-        margin-bottom: 300px;
+        width: 500px;
     }
 
-    /*Système de cadres + cercles + lignes*/
-    #couleur_de_fond 
+    .container-fluid-tarifs img 
     {
-        margin-top: -260px;
-        padding: 50px;
-    }
-
-    #cercle 
-    {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        margin-left: 50%;
-        margin-bottom: 350px;
-        background-color: #7d7d7d;
-    }
-
-    .line 
-    {
-        position: absolute;
-        background-color: #636363;
-        height: 380px;
-        width: 2px;
-        margin-left: 14px;
-        z-index: -1;
-    }
-
-    .line_2
-    {
-        margin-left: -110px;
-    }
-
-    .ligne
-    {
-        visibility: hidden;
-    }
-
-    .agencement_cadre_1 
-    {
-        margin-top: -210px;
-    }
-    .agencement_cadre_2
-    {
-        margin-top: 60px;
-    }
-    
-    .agencement_cadre_3 
-    {
-        margin-top: 15px;
-    }
-    
-    .agencement_cadre_4
-    {
-        margin-top: 80px;
-    }
-
-    #cercle_3 .line 
-    {
-        visibility: hidden;
-    }
-
-    p
-    {
-        font-size: 25px;
-        line-height: 38px;
-    }
-
-    .col-md-8 p 
-    {
-        font-size: 30px;
-    }
-
-    .col-md-8 
-    {
-        color: rgb(37, 37, 37);
-        margin-left: 350px;
-    }
-
-    #competences #formations
-    {
-        margin-top: 400px;
-    }
-
-    .positionnement_2 .line_2
-    {
-        width: 140px;
-    }
- 
-    .positionnement_3 
-    {
-        margin-top: -240px;
-    } 
-
-    .positionnement_3 .couleur_de_fond 
-    {
-        margin-top: 40px;
-    }    
-
-    #formations .agencement_cadre_1 
-    {
-        margin-top: 15px;
-    }
-
-    #formations .agencement_cadre_2 
-    {
-        margin-top: 150px;
-    }
-
-    #formations .agencement_cadre_3 
-    {
-        margin-top: 135px;
-    }
-
-    #formations .agencement_cadre_4 
-    {
-        margin-top: 150px;
-    }
-
-    #formations .agencement_cadre_5 
-    {
-        margin-top: 155px;
-    }
-
-    #formations .agencement_cadre_6 
-    {
-        margin-top: 150px;
-    }
-
-    .titre_experiences 
-    {
-        padding-top: 300px;
-    }
-
-    #experiences .agencement_cadre_1 
-    {
-        margin-top: 15px;
-    }
-
-    #experiences .agencement_cadre_2 
-    {
-        margin-top: 170px;
-    }
-
-    #experiences .agencement_cadre_3 
-    {
-        margin-top: 135px;
-    }
-
-    #experiences .agencement_cadre_4 
-    {
-        margin-top: 110px;
-    }
-
-    #experiences .agencement_cadre_5 
-    {
-        margin-top: 115px;
-    }
-
-    #experiences .agencement_cadre_6 
-    {
-        margin-top: 115px;
-    }
-
-    #experiences .agencement_cadre_7 
-    {
-        margin-top: -330px;
+        width: 90%;
     }
 
     /*Formulaire de contact*/
@@ -5777,35 +5541,19 @@ footer p
         font-size: 25px;
     }
 
+    .contact-form textarea 
+    {
+        height: 230px;
+    }
+
     #message 
     {
         margin-left: -505px;
     }
 
-    #cadre 
-    {
-        position: absolute;
-        width: 200px;
-        background-color: #f5f5f5;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        margin-left: -40px;
-        margin-top: 20px;
-        border: none;
-    }
-
     tbody 
     {
-        display: flex;
-        background-color: #26394abf;
-        border: #00000028 1px solid;
-        padding-bottom: 190px;
-        padding-left: 190px;
-        padding-top: 80px;
-        padding-right: 100px;
-        border-radius: 4px;
+        font-size: 25px;
     }
 
     #envoie
@@ -5818,6 +5566,39 @@ footer p
         letter-spacing: 0.5px;
     }
 
+    form 
+    {
+        height: 785px;
+    }
+
+    label 
+    {
+        font-size: 25px;
+    }
+
+    .contact-form 
+    {
+        width: 600px;
+    }
+
+    .contact-coordonnees 
+    {
+        width: 600px;
+        height: 650px;
+    }
+
+    .fa, .fab, .fad, .fal, .far, .fas 
+    {
+        font-size: 25px;
+    }
+
+    /*Bouton envoyer*/
+    .envoyer 
+    {
+        width: 200px !important;
+        font-size: 25px;
+    }
+
     #erreur 
     {
         position: absolute;
@@ -5828,12 +5609,6 @@ footer p
         letter-spacing: 0.5px;
     }
 
-    /*Contact*/
-    .contact 
-    {
-        padding-top: 450px;
-    }
-
     /*Bas de page*/
     footer 
     {
@@ -5842,8 +5617,12 @@ footer p
 
     footer p 
     {
-        padding-top: 60px;
-        font-size: 26px;
+        font-size: 22px;
+    }
+
+    .agencement_footer a 
+    {
+        font-size: 22px;
     }
 
     /*Icones réseaux sociaux*/
@@ -5851,124 +5630,43 @@ footer p
     {
         background-size: 70px;
         height: 70px;
-        margin-top: 42px;
     }
 
     .icone_2
     {
         background-size: 70px;
         height: 70px;
-        margin-top: 42px;
-        margin-left: -85px;
     }
 
     .icone_3 
     {
         background-size: 70px;
         height: 70px;
-        margin-top: 42px;
-        margin-left: -85px;
     }
 }
 
-@media (max-width: 1920px)
+@media (max-width: 1650px)
 {
-    /*Titre Guillaume Liebe*/
-    .bienvenue h3 
-    {
-        font-family: "Rightland";
-        font-size: 140%;
-        letter-spacing: 10px;
-        text-transform: capitalize;
-        text-align: center;
-        padding-top: 0px;
-        font-weight: bold;
-        text-shadow: 0px 5px 15px black;
-        color: white;
-        transform: rotate(-5deg) scaleY(1.1);
-        margin-right: 10px;
-        margin-bottom: 50px;
-    }
-    #cascade 
-    {
-        margin-top: -400px;
-        height: 1560px;
-        margin-bottom: -680px;
-    }
-
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
-    {
-        margin-top: 800px;
-        margin-bottom: -350px;
-    }
-
-    #galaxie 
-    {
-        margin-top: 100px;
-        margin-bottom: -450px;
-    }
-
-    .contact
-    {
-        padding-top: 480px;
-    }
-}
-
-@media (max-width: 1600px)
-{
-    /*Système de cadres + cercles + lignes*/
-    .positionnement_1 .couleur_de_fond 
-    {
-        margin-left: -100px;
-        margin-top: -85px;
-    }
-
-    .positionnement_2 .couleur_de_fond 
-    {
-        margin-right: -100px;
-        margin-top: -85px;
-    }   
-}
-
-@media (max-width: 1550px)
-{
-    /*Scrolls sur les pages*/
-    #page-1
-    {
-        margin-bottom: -50px;
-        scroll-behavior: smooth;
-    }
-
-    #page-2
-    {
-        margin-bottom: -530px;
-    }
-
-    #page-3, #page-4, #page-5
-    {
-        margin-bottom: -630px;
-        scroll-behavior: smooth;
-    }
-
-    .titre_experiences 
-    {
-        margin-top: -300px;
-    }
-}
-
-@media (max-width: 1520px)
-{
-    /*Logo LG*/
-    #logo 
+    /*#logo LG*/
+    #logo
     {
         display: flex;
     }
 
+    /*Menu*/
+    .navbar-nav 
+    {
+        float: left;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 110px;
+        margin-bottom: -30px;
+    } 
+
     /*Container textes bandeau*/
     .container-fluid 
     {
-         margin-top: -20px;
+            margin-top: -20px;
     }
 
     .dropdown, .dropup 
@@ -5976,117 +5674,39 @@ footer p
         position: unset;
     }
 
-    /*Menu*/
-    .navbar-nav 
+    .texte_menu_header 
     {
-        float: left;
-        margin-left: 170px;
-        margin-right: 0px;
-        margin-top: 80px;
-        margin-bottom: -30px;
-    }
-
-    /*Titre Guillaume Liebe*/
-    .bienvenue h3 
-    {
-        margin-top: 50px;
+        margin-left: 140px;
+        text-align: center;
     }
 }
 
 @media (max-width: 1440px)
 {
-    /*Scrolls sur les pages*/
-    #page-1 
+    /*Titre de niveau III*/
+    h3
     {
-        margin-top: 0px;
-        margin-bottom: -50px;
+        font-size: 60px;
     }
 
-    #page-2
+    /*Container tarifs*/
+    .container-fluid-tarifs .row 
     {
-        margin-bottom: -530px;
+        width: 100%;
     }
 
-    #page-3
-    {
-        margin-bottom: -630px;
-    }
-
-    #page-4
-    {
-        margin-bottom: -580px;
-    }
-
-    #page-5
-    {
-        margin-bottom: -50px;
-    }
-
-    /*Grandes photos de séparations des contenus*/
-    #desert 
-    {
-        margin-bottom: -400px;
-        margin-top: -250px;
-    }
-
-    #thailande_rochers 
-    {
-        margin-top: -250px;
-        margin-bottom: -450px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    .agencement_cadre_1 
-    {
-        margin-top: 0px;
-    }    
-
-    #formations .agencement_cadre_1 
-    {
-        margin-top: 50px;
-    } 
-
-    #formations .agencement_cadre_2 
-    {
-        margin-top: 55px;
-    }
-
-    #formations .agencement_cadre_4 
-    {
-        margin-top: 35px;
-    } 
-
-    #formations .agencement_cadre_6 
-    {
-        margin-top: 35px;
-    }
-
-    .positionnement_2 .couleur_de_fond 
-    {
-        margin-top: -90px;
-    }  
-}
-
-@media (max-width: 1380px)
-{
-    /*Titre Guillaume Liebe*/
-    .bienvenue h3 
-    {
-        padding-top: 100px;
-    }
-
-    .container 
+    .row-2
     {
         width: 100%;
     }
 }
 
-@media (max-width: 1254px)
+@media (max-width: 1380px)
 {
     /*Titre Guillaume Liebe*/
-    .bienvenue h3 
+    .container 
     {
-        padding-top: 0;
+        width: 100%;
     }
 }
 
@@ -6095,8 +5715,7 @@ footer p
     /*Menu*/
     .navbar-fixed-top 
     {
-
-        position: static;
+        position: absolute;
         right: 0;
         left: 0;
         z-index: 1030;
@@ -6104,16 +5723,21 @@ footer p
 
     .navbar-nav 
     {
-        padding-top: 30px;
+        padding-top: 80px;
     }
 
     .open>.dropdown-menu 
     {
-        display: block;
-        padding-top: 20px;
-        padding-bottom: 0px;
-        margin-left: 35%;
-        border-radius: 10px;
+        position: fixed;
+        display: none;
+        margin-left: 50%;
+        right: -1px;
+        padding-top: 50px;
+        padding-bottom: 100%;
+        margin-top: -1px;
+        border-radius: 0px;
+        top: 0%;
+        bottom: 0;
     }
 
     .texte_menu_header 
@@ -6121,41 +5745,21 @@ footer p
         margin-top: 60px;
     }
 
-    .menu_deroulant 
-    {
-        padding-bottom: 20px;
-    }
-
-    .bord_arrondi_haut .dropdown-item
-    {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-    .bord_arrondi_bas .dropdown-item
-    {
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-
-    .btn 
-    {
-        padding: 6px 45%;
-        display: none;
-    }
-
     .dropdown-menu a 
     {
         text-decoration: none;
         font-size: 20px;
-        line-height: 40px;
         color: #9d9d9d;
+        text-align: start;
+        padding: 15px 60px;
+        border-bottom: #333333 0.5px solid;
     }
 
     .dropdown-item a:hover
     {
         color: #ffffff;
         text-decoration: none;
+        color: #272727;
         background-color: rgb(134, 134, 134);
     }
 
@@ -6167,106 +5771,36 @@ footer p
     }
 
     /*Container textes bandeau*/
-    .container-fluid 
+    .phrase_accroche 
     {
-        margin-top: 0px;
-    }
-
-    /*Bouton Curriculum Vitae*/
-    #informations 
-    {
-        margin-top: 2%;
-    }
-
-    #bouton_moins 
-    {
-        margin-top: 2%;
-    }
-
-    #bouton_plus 
-    {
-        margin-top: 2%;
-    }
-
-    /*Scrolls sur les pages*/
-    #page-1 
-    {
-        margin-bottom: -180px;
-        margin-top: 290px;
-    }
-
-    #page-2, #page-3, #page-4, #page-5 
-    {
-        margin-bottom: -180px;
-        margin-top: 290px;
+        padding-top: 350px;
     }
 
     /*Logo LG*/
     #logo 
     {
-        background-image: url(../img/logo_lg.png);
         background-repeat: no-repeat;
         background-size: 170px;
-        margin-left: 70px;
-        height: unset;
-        margin-top: 30px;
-        margin-bottom: 40px;
+        margin-left: 30px;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 
-    /*Titre de niveau III*/ 
-    h3 
+    /*Colonnes*/
+    .col-md-8 h3 
     {
         padding-top: 100px;
     }
 
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
+    /*Photo de profil*/
+    .profil img
     {
-        margin-top: 60%;
+        margin-left: -20px;
+        margin-top: 30px;
     }
 
-    #galaxie 
-    {
-        margin-top: 0px;
-    }
-
-    .titre_experiences 
-    {
-        margin-top: -500px;
-    }
-
-    .contact 
-    {
-        margin-top: 300px;
-    }
-
-    /*Mentions légales*/
-    #mentions 
-    {
-        margin-top: -50px;
-    }
-}
-
-@media (max-width: 1091px)
-{
-    
-    /*Titre de niveau VI*/
-    h6 
-    {
-        margin-top: 100px;
-    }
-    
-    .col-md-6
-    {
-        text-align: center;
-    }
-
-    .col-md-8 h3 
-    {
-        padding-top: 350px;
-    }
-    
-    /*Menu PORFOLIO*/
+    /*PORTFOLIO*/
     #portfolio 
     {
         padding: 0px;
@@ -6294,6 +5828,41 @@ footer p
         margin-left: 33%;
         border: none;
     }
+
+    /*Grandes photos de séparations des contenus*/
+    #bandeau_competences
+    {
+        margin-top: 0px;
+    }
+
+    /*Mentions légales*/
+    #mentions 
+    {
+        margin-top: 300px;
+    }
+}
+
+@media (max-width: 1091px)
+{  
+    .col-md-6
+    {
+        text-align: center;
+    }
+
+    /*Menu PORFOLIO*/
+    #portfolio 
+    {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    button 
+    {
+        margin-right: 33%;
+        margin-left: 33%;
+        border: none;
+    }
 }
 
 @media (max-width: 1024px)
@@ -6312,226 +5881,63 @@ footer p
 
     .col-md-8 h3 
     {
-        padding-top: 300px;
-    }
-
-    /*Titre bienvenue*/
-    .bienvenue 
-    {
-        margin-top: -100px;
-    }
-
-    /*Titre de niveau III*/ 
-    h3 
-    {
-        margin-top: 120px;
-    }
-
-    /*Bouton curriculum Vitae*/
-    #curriculum_vitae 
-    {
-        margin-right: 0px;
-    }
-
-    #bouton_plus 
-    {
-        margin-top: 1%;
-        position: absolute;
-    }
-
-    #bouton_moins 
-    {
-        margin-top: 1%;
-        position: absolute;
-    }
-
-    .moins 
-    {
-        padding-right: 16px;
-    }
-
-    #informations 
-    {
-        margin-top: 1%;
-        position: absolute;
-    }
-
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
-    {
-        margin-top: 45%;
-        margin-bottom: -500px;
-    }  
-
-    #galaxie 
-    {
-        margin-bottom: -700px;
-    }
-
-    #desert 
-    {
-        margin-bottom: -700px;
-    }
-
-    #thailande_rochers 
-    {
-        margin-bottom: -700px;
-    }
-
-    #cascade 
-    {
-        margin-bottom: -1250px;
-    }
-
-    /*Scrolls sur les pages*/
-    #page-2
-    {
-        margin-bottom: -540px;
-        margin-top: 290px;
-    }
-
-    #page-3
-    {
-        margin-bottom: -440px;
-        margin-top: 220px;
-        padding-top: 270px;
-    }
-
-    #page-4, #page-5
-    {
-        margin-bottom: -540px;
-        margin-top: 320px;
-        padding-top: 380px;
-    }
-
-    #page-6 
-    {
-        margin-bottom: -860px;
-        scroll-behavior: smooth;
-        margin-top: 280px;
-    }
-
-    /*Section Titre compétences*/
-    .titre_competences
-    {
-        margin-bottom: 100px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    #formations .agencement_cadre_1 
-    {
-        margin-top: 70px;
-    }
-
-    #formations .agencement_cadre_2 
-    {
-        margin-top: 50px;
-    }
-
-    #formations .agencement_cadre_3 
-    {
-        margin-top: 50px;
-    }
-
-    #formations .agencement_cadre_4 
-    {
-        margin-top: 40px;
-    }
-
-    #formations .agencement_cadre_5 
-    {
-        margin-top: 65px;
-    }
-
-    #formations .agencement_cadre_6 
-    {
-        margin-top: 50px;
-    }
-
-    .agencement_cadre_1 
-    {
-        margin-top: -110px;
-    }
-
-    .agencement_cadre_4 
-    {
-        margin-top: -100px;
-    }
-
-    .positionnement_1 .couleur_de_fond 
-    {
-        margin-top: -100px;
-    }
-
-    .positionnement_2 .couleur_de_fond 
-    {
-        margin-right: -100px;
-        margin-top: -90px;
-    }
-
-    /*Contact*/
-    .contact 
-    {
-        margin-left: 0%;
-    }
-
-    /*Formulaire de contact*/
-    tbody
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
-    textarea
-    {
-       margin-left: -90px;
-    }
-
-    form p 
-    {
-        margin-left: -272px;
-        margin-top: -10px;
+        padding-top: 400px;
     }
 
     /*Icones message*/
-    .fa-envelope:before 
-    {
-        margin-left: -38px;
-    }
-
     #message 
     {
         margin-left: -330px;
     }
 
-    /*Icone envoyer*/
-    .fa-telegram-plane:before 
+    .container-formulaire 
     {
-        margin-left: -70px;
+        flex-direction: column-reverse;
     }
 
-    #cadre 
+    .contact-form 
     {
-        margin-left: -90px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.5);
+        margin: 50px auto 0px;
+        width: 500px;
+        text-align: center;
     }
 
-    /*Mentions légales*/
-    #mentions 
+    .contact-coordonnees 
     {
-        margin-top: -150px;
+        box-shadow: 0 0 4px rgba(0,0,0,0.5);
+        margin: 0px 0px;
+        width: 100%;
+        height: 530px;
+        text-align: center;
+        margin-top: 50px;
     }
 
-    /*Couleur envoie du mail (formulaire)*/
-    #envoie
+    table 
     {
-        margin-left: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;   
     }
 
-    /*Couleur champs pas rempli (formulaire)*/
-    #erreur
+    /*Footer*/
+    footer 
     {
-        margin-right: 0px;
-        margin-left: unset;
+        margin-top: 20px;
+    }
+
+    .agencement_footer 
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .agencement_icones 
+    {
+        padding-top: 15px;
+        justify-content: center;
     }
 }
 
@@ -6542,11 +5948,20 @@ footer p
     {
         margin-left: 0px;
     }  
+
+    /*Titre de niveau III*/
+    h3 
+    {
+        font-size: 60px;
+    }
+
     /*Photo de profil*/
     .profil img 
     {
         margin-left: auto;
+        margin-top: 0px;
     }
+    
     .col-md-8 p 
     {
         margin: 0;
@@ -6561,82 +5976,38 @@ footer p
         width: 300px;
         margin-left: 0px;
     }
-
-    /*Grandes photos de séparations des contenus*/
-    #immeuble
-    {
-        margin-top: -20%;
-        margin-bottom: -450px;
-    }
-
-    #galaxie
-    {
-        margin-bottom: -450px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    div.col-md-3 
-    {
-        float: right;
-        margin-right: 55%;
-        margin-top: -30px;
-    }
-    
-    .positionnement_1 .col-md-3 
-    {
-        float: left;
-        margin-top: -30px;
-        margin-left: 185px;
-    }
-
-    .positionnement_2 #couleur_de_fond 
-    {
-        margin-right: -100px;
-        margin-top: -85px;
-    }
-
-    .positionnement_2  div.col-md-3
-
-    {
-        float: right;
-        margin-left: 58%;
-        margin-right: 155px;
-        margin-top: -30px;
-    }
 }
 
 @media (max-width: 991px)
-{    
-    /*Titre de niveau VI*/
-    h6 
+{
+
+    .container 
     {
-        font-size: 230%;
+        width: 80%;
     }
 
-    /*Paragraphes PORTFOLIO*/
+    /*Bandeau d'accueil*/
+    .bandeau_accueil 
+    {
+        margin-bottom: 450px;
+    }
+
+    /*Textes profil*/
+    .col-md-7 
+    {
+        margin-bottom: 0px;
+        text-align: start;
+    }
+
+    /*Paragraphes*/
     p 
     {
-        font-size: 180%;
+        font-size: 150%;
     }
 
-    /*Système de cadres + cercles + lignes*/
-    #formations .agencement_cadre_1 #couleur_de_fond 
+    #digital_arts, #production_videos 
     {
-        padding-left: 70px;
-        margin-top: -85px;
-        text-align: end;
-    }
-
-    #formations .agencement_cadre_2 #couleur_de_fond 
-    {
-        padding-left: 70px;
-        margin-top: -85px;
-        text-align: end;
-    }
-
-    #formations .agencement_cadre_6 #couleur_de_fond 
-    {
-        padding-right: 90px;
+        margin-top: -1100px;
     }
 
     /*Agrandissement d'images galaxy tacos*/
@@ -8531,6 +7902,36 @@ footer p
         margin-top: -90%;
         margin-left: 8%;
     }
+
+    /*Barres de Compétences*/
+    #Skill-HTML, #Skill-JAVASCRIPT, #Skill-PHP, #Skill-MYSQL, #Skill-PHOTOSHOP, #Skill-ILLUSTRATOR, #Skill-INDESIGN, #Skill-AFTER-EFFECTS, 
+    #Skill-PREMIERE-PRO, #Skill-3DS-MAX, #Skill-MAYA, #Skill-ZBRUSH, #Skill-REALFLOW 
+    {
+        text-align: start;
+        padding-top: 4px;
+    }
+
+    .Skill-Area 
+    {
+        font-size: 17px;
+    }
+
+    .PercentText 
+    {
+        padding-top: 0;
+    }
+
+    /*Container tarifs*/
+    .container-fluid-tarifs img 
+    {
+        width: 60%;
+    }
+
+    /*Mentions légales*/
+    #mentions p 
+    {
+        font-size: 140%;
+    }
 }
 
 @media (min-width: 992px)
@@ -8547,33 +7948,70 @@ footer p
     {
         width: 50%;
         opacity: 0;
+        font-size: 20px;
     }
 }
 
-@media (max-width: 950px)
+
+@media (max-width: 905px)
 {
-    #page-6 
+    /*Logo LG*/
+    #logo 
     {
-        margin-bottom: -760px;
+        margin-top: 75px;
+        padding-left: 5%;
+    }
+
+    .container-fluid 
+    {
+        margin-bottom: -50px;
+    }
+
+    .bandeau_accueil 
+    {
+        margin-bottom: 500px;
+    }
+
+    /*Mentions Légales*/
+    #mentions 
+    {
+        margin-top: 350px;
+    }
+}
+
+@media (max-width: 955px)
+{
+    /*Logo LG*/
+    #logo 
+    {
+        padding-left: 5%;
+    }
+}
+
+@media (max-width: 959px)
+{
+    .container-fluid 
+    {
+        margin-bottom: 0px;
+    }
+
+    .phrase_accroche 
+    {
+        padding-top: 330px;
     }
 }
 
 @media (max-width: 845px)
 {
-    .btn 
+    /*Titre de niveau III*/
+    h3 
     {
-        padding: 6px 42%;
-        display: inline-block;
+        font-size: 50px;
     }
 
     .dropdown-menu>li>a 
     {
         display: block;
-    }
-
-    .open>.dropdown-menu 
-    {
-        margin-left: 32%;
     }
 
     .dropdown-menu>li>a 
@@ -8582,18 +8020,6 @@ footer p
         padding-bottom: 17px;
         padding-left: 30px;
         padding-right: 30px;
-    }
-
-    .sous_deroulant 
-    {
-        margin-left: 213px;
-        margin-top: -63px;
-    }
-
-    .bienvenue h3 
-    {
-        margin-top: 0px;
-        padding-top: 0px;
     }
 }
 
@@ -8607,53 +8033,108 @@ footer p
 
     .dropdown, .dropup 
     {
-        position: relative;
+        position: absolute;
+        right: 20px;
+        top: 30px;
     }
 
     .fa-bars:before 
     {
         visibility: visible;
         cursor: pointer;
-        padding: 12px 16px 10px 15px;
     }    
-    
-    .btn 
+
+    .open>.dropdown-menu 
     {
-        padding: 6px 45%;
-        display: flex;
+        position: fixed;
+        display: block;
+        margin-left: 50%;
+        right: -1px;
+        padding-top: 50px;
+        padding-bottom: 100%;
+        margin-top: -1px;
+        border-radius: 0px;
+        top: 0%;
+        bottom: 0%;
     }
 
     .dropdown-menu>li>a 
     {
-        padding: 3px 20px;
+        padding: 50px;
         clear: both;
         font-weight: 400;
         line-height: 1.42857143;
         color: #9d9d9d;
         white-space: nowrap;
-        margin-top: -20px;
         padding-top: 20px;
         padding-bottom: 20px;
-        padding-left: 70px;
-        padding-right: 70px;
-        text-align: center;
+        text-align: start;
+    }
+
+    #menu_sites_web_2, #menu_infographie_2, #menu_conception_3d_2, #menu_digital_arts_2, #menu_production_video_2, nav 
+    {
+        color: #d4d4d4;
+        background-color: #404040;
+        border-bottom: #9d9d9d38 0.5px solid;
+    }
+
+    nav a:hover 
+    {
+        color: #262626;
+        border-bottom: unset;
+        text-decoration: none;
+        text-align: unset;
+        text-decoration: none;
+        background-color: #f5f5f5;
+        border-left: rgb(181, 0, 0) 3px solid;
     }
 }
 
 @media (max-width: 768px)
 {
+    /*Logo LG*/
+    #logo 
+    {
+    background-size: 170px;
+    margin-left: 50%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    }
+
     .col-md-8 h3 
     {
     padding-top: 200px;
     }
-    
+
+    /*Titre */
+    .texte_menu_header 
+    {
+        margin-top: 200px;
+        margin-left: -230px;
+        padding-bottom: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
     /*Menu*/
     .navbar-inverse 
     {
-        position: static;
+        position: relative;
         padding-right: 20%;
     }
 
+    .container-fluid 
+    {
+        margin-bottom: 0px;
+    }
+
+    .btn a:hover 
+    {
+        background-color: unset;
+        border-left: unset;
+    }
+    
     .col-md-8 
     {
         margin-top: -450px;
@@ -8661,23 +8142,7 @@ footer p
 
     .col-md-8 h3 
     {
-        padding-top: 500px;
-    }
-
-    .btn 
-    {
-        padding: 6px 45%;
-        margin-top: -20px;
-    }
-
-    .open>.dropdown-menu 
-    {
-        margin-left: 28.5%;
-    }
-
-    .dropdown-menu>li>a {
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-top: 450px;
     }
 
     .navbar-inverse .navbar-brand 
@@ -8697,27 +8162,17 @@ footer p
     {
         margin-top: 70px;
     }
-
-    .dropdown, .dropup 
+    
+    /*Bouton visualiser*/
+    #bouton_visualiser 
     {
-        margin-left: 17%;
-    }
-
-    .sous_deroulant 
-    {
-        margin-left: 203px;
+        margin-bottom: 0px;
     }
 
     /*Blocs Créations de sites | Conception Graphique | Conception 3D*/
     .bloc-1, .bloc-2, .bloc-3
     {
         background-color: #3e3e3ef5;
-    }
-
-    /*Titre bienvenue*/
-    .bienvenue 
-    {
-        margin-top: -50px;
     }
 
     /*Textes d'accroche bandeau*/
@@ -8735,11 +8190,35 @@ footer p
         letter-spacing: 4px;
     }
 
+    /*Bandeau accueil*/
+    .bandeau_accueil 
+    {
+        position: relative;
+        margin-top: -490px;
+        margin-bottom: 900px;
+    }
+
+    .phrase_accroche 
+    {
+        padding-top: 520px;
+    }
+
+    /*Titre de niveau II*/
+    h2 
+    {
+        font-size: 40px;
+    }
+
     /*Titre de niveau III*/
     h3 
     {
-        letter-spacing: 15px;
-        margin-top: -80px;
+        font-size: 55px;
+    }
+
+    h3:before, h3:after 
+    {
+        width: 10%;
+        margin-top: -10px;
     }
 
     p 
@@ -8748,57 +8227,22 @@ footer p
         line-height: 24px;
     }
 
-    /*Boutons Curriculum Vitae*/
-    .moins 
+    /*Icones*/
+    img 
     {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        width: 125px;
     }
 
-    .plus 
+    /*Photo de profil*/
+    .profil img 
     {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-top: -10px;
     }
 
-    #bouton_moins 
+    /*Textes blocs*/
+    .textes_accroche 
     {
-        right: 161px;
-    }
-
-    .moins 
-    {
-        padding-right: 10px;
-    }
-
-    #informations
-    {
-        right: 0px;
-    }
-
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
-    {
-        margin-bottom: -600px;
-    } 
-    
-    #galaxie 
-    {
-        margin-top: 0;
-        margin-bottom: -1000px;
-    } 
-
-    #desert 
-    {
-        margin-top: -40%;
-        margin-bottom: -500px;
-    }
-
-    #cascade 
-    {
-        height: 1560px;
-        margin-top: -400px;
-        margin-bottom: -1600px;   
+        font-size: 20px;
     }
 
     /*PORFOLIO*/
@@ -9894,226 +9338,26 @@ footer p
         margin-left: 7.5%;
     }
 
-    /*Scrolls sur les pages*/
-    #page-1 
+    #digital_arts, #production_videos
     {
-        margin-top: 250px;
-        margin-bottom: 50px;
-        padding-top: 10px;
+        margin-top: -700px;
     }
 
-    #page-2 
+    /*Container tarifs*/
+    .container-fluid-tarifs .row 
     {
-        margin-top: 400px;
-        margin-bottom: -640px;
+        width: 100%;
     }
 
-    #page-3 
+    .row-2
     {
-        margin-top: 100px;
-        margin-bottom: -585px;
-        padding-top: 0px;
-    }
-
-    #page-4 
-    {
-        margin-top: 100px;
-        margin-bottom: -535px;
-        padding-top: 0px;
-    }
-
-    #page-5 
-    {
-        margin-top: -380px;
-        margin-bottom: 380px;
-        padding-top: 10px;
-    }
-
-    #page-6 
-    {
-        margin-bottom: -700px;
-        margin-top: 590px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    #cercle 
-    {
-        margin-left: 48%;
-    }
-
-    #competences
-    {
-        margin-top: 300px;
-    }
-
-    .agencement_cadre_1
-    {
-        margin-top: -140px;
-    }
-
-    .agencement_cadre_2
-    {
-        margin-top: -30px;
-    }
-    .agencement_cadre_3
-    {
-        margin-top: -135px;
-    }
-
-    .agencement_cadre_4 
-    {
-        margin-top: 230px;
-    }
- 
-    .positionnement_1 .couleur_de_fond 
-    {
-        margin-left: -130px;
-        margin-top: -85px;
-    }
-
-    .positionnement_2 .couleur_de_fond 
-    {
-        margin-top: 140px;
-        margin-left: -20px;
-    }
-     .positionnement_2 div.col-md-3 
-    {
-        margin-top: -350px;
-    }
-
-    .positionnement_3 
-    {
-        margin-top: 20px;
-    }
-
-    #formations .agencement_cadre_1 .couleur_de_fond 
-    {
-        padding-left: 0px;
-        margin-top: -85px;
-        text-align: end;
-    }
-
-    #formations .agencement_cadre_6 .couleur_de_fond 
-    {
-        padding-right: 20px;
-    }
-
-    #formations .agencement_cadre_1 
-    {
-        margin-top: 55px;
-    }
-
-    #formations .agencement_cadre_2
-    {
-        margin-top: 270px;
-        margin-right: -315px;
-    }
-
-    #formations .agencement_cadre_4 
-    {
-        margin-top: 280px;
-    }
-
-    #formations .agencement_cadre_6 
-    {
-        margin-top: 280px;
-    }
-
-    #experiences .agencement_cadre_1 
-    {
-        margin-top: 36px;
-    }
-
-    #experiences .agencement_cadre_2 
-    {
-        margin-top: 270px;
-    }
-
-    #experiences .agencement_cadre_3 
-    {
-        margin-top: 45px;
-    }
-
-    #experiences .agencement_cadre_4 
-    {
-        margin-top: 235px;
-    }
-
-    #experiences .agencement_cadre_5 
-    {
-        margin-top: -100px;
-    }
-
-    #experiences .agencement_cadre_6 
-    {
-        margin-top: 250px;
-    }
-
-    .titre_formations .positionnement_1 .col-md-3 
-    {
-        margin-top: -30px;
-    }
-
-    #formations #cercle_1 .line  
-    {
-        visibility: hidden;
-    }
-
-    #cadre_1
-    {
-        margin-left: 0px;
-    }   
-
-    .position 
-    {
-        margin-top: unset;
-    }
-
-    #formations .agencement_cadre_3 
-    {
-        margin-top: 30px;
-    }
-
-    #formations .agencement_cadre_5 
-    {
-        margin-top: 45px;
-    }
-
-    #formations .agencement_cadre_6 .couleur_de_fond 
-    {
-        padding-right: 40px;
-    }
-
-    .titre_experiences 
-    {
-        margin-top: -300px;
-    }
-
-    .contact 
-    {
-        margin-top: 300px;
-        margin-left: 0%;
+        width: 100%;
     }
 
     /*Formulaire de contact*/
-    #mentions 
+    .contact-coordonnees 
     {
-        margin-top: -10px;
-    }
-    
-    #cadre 
-    {
-        margin-left: -100px;
-    }
-
-    #envoie 
-    {
-        margin-left: -10px;
-    }
-
-    #erreur 
-    {
-        margin-left: -50px;
+        margin-top: 50px;
     }
 
     /*Bas de page*/
@@ -10121,462 +9365,103 @@ footer p
     {
         display: flex;
         flex-direction: column;
-        margin-left: -160px;
     }  
     
     .agencement_icones
     {
         display: flex;
-        margin-left: 280px;
-        margin-top: -20px;
+        margin-left: auto;
     } 
-
-    footer 
-    {
-        height: 190px;
-    }
 
     #message 
     {
-        margin-left: -275px;
+        margin-left: -255px;
         margin-right: 60px;
+    }
+
+    form p 
+    {
+        margin-left: -380px;
+        margin-top: -10px;
+    }
+
+    input 
+    {
+        width: 372px;
+        margin-right: -20px;
+        padding-left: 10px;
+    }
+
+    /*Mentions Légales*/
+    #mentions 
+    {
+        margin-top: 400px;
     }
 }
 
 @media (max-width: 767px)
 {
-    /*Menu*/
-    #formations #cercle_1 .line  
+    #logo 
     {
-        visibility: hidden;
+        margin-left: 55%;
     }
 
-    .navbar-nav 
+    /*Menu*/
+    .navbar-inverse 
+    {
+        position: relative;
+        padding-right: 30%;
+        padding-bottom: 15%;
+    }
+
+    .navbar-nav
     {
         margin-top: -80px;
-    }
-}
-
-@media (max-width: 744px)
-{
-    /*Titre */
-    .texte_menu_header 
-    {
-        margin-top: 45px;
-    }
-}
-
-@media (max-width: 730px)
-{
-    .open>.dropdown-menu 
-    {
-        margin-left: 23%;
     }
 }
 
 @media (max-width: 710px)
 {
-    /*Titre de niveau III*/
-    h3 
+    .col-md-8 h3 
     {
-        margin-top: -80px;
+        padding-top: 300px;
     }
 
-    /*Grandes photos de séparations des contenus*/
-    #desert 
+    /*PORTFOLIO*/
+    .portfolio 
     {
-        margin-top: 20%;
-        margin-bottom: -700px;
+        margin-top: 350px;
     }
 
-    #thailande_rochers 
+    button 
     {
-        margin-top: 150px;
-        margin-bottom: -600px;
-    }
-
-    #cascade 
-    {
-        margin-top: 1450px;
-    }
-
-    /*Scrolls sur les pages*/
-    #page-1
-    {
-        margin-top: 250px;
-        margin-bottom: -200px;
-        padding-top: 160px;
-    }
-
-    #page-2
-    {
-        margin-top: 250px;
-        margin-bottom: -470px;
-        padding-top: 160px;
-    }
-
-    #page-3
-    {
-        margin-top: 250px;
-        margin-bottom: -210px;
-        padding-top: 160px;
-    }
-
-    #page-4
-    {
-        margin-top: 250px;
-        margin-bottom: -210px;
-        padding-top: 160px;
-    }
-
-    #page-5
-    {
-        margin-top: 250px;
-        margin-bottom: 220px;
-        padding-top: 160px;
-    }
-
-    #page-6
-    {
-        padding-bottom: 0px;
-        margin-top: 1200px;
-        margin-bottom: -610px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    .couleur_de_fond 
-    {
-        margin-left: 0px;
-        margin-top: -150px;
-        margin-bottom: 250px;
-    }
-
-    #formations .couleur_de_fond 
-    {
-        margin-top: -160px;
-        padding-right: 20px;
-        margin-right: 0px;
-        margin-left: 90px;
-    }
-
-    .position
-    {
-        margin-top: -6px;
-    }
-
-    .ligne
-    {
-        visibility: visible;
-    }
-    
-    div.col-md-3 
-    {
-        float: right;
-        margin-right: 0%;
-        margin-top: -30px;
-    }
-
-    .titre_competences .titre_formations
-    {
-        margin-bottom: 300px;
-    }
-
-    .positionnement_1 .couleur_de_fond 
-    {
-        margin-top: -140px;
-        text-align: left;
-        margin-left: -185px;
-    }
-
-    .positionnement_1 .col-md-3 
-    {
-        text-align: start;
-        margin-top: 85px;
-    }   
-
-    .positionnement_2 .couleur_de_fond 
-    {
-        margin-top: -160px; 
-        margin-right: 0px;
-        margin-left: 0px;
-    }
-
-    .positionnement_2 div.col-md-3
-    {
-        float: right;
-        margin-left: unset;
-        margin-right: unset;
-        margin-top: 30px;
-    }
-
-    .positionnement_3 
-    {
-        margin-top: -210px;
-    }
-
-    #competences #cercle_1 
-    {
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        margin-left: 50%;
-        background-color: #484848;
-        margin-top: -125px;
-    }
-
-    #cercle 
-    {
-        visibility: hidden;
-    }
-
-    #cercle_1
-    {
-        position: absolute;
-        height: 33px;
-        width: 34px;
-        border-radius: 50%;
-        margin-left: 50%;
-        background-color: #484848;
-        border: 3px solid #bd0000;
-        margin-top: -85px;
-    }
-
-    #cercle_2 
-    {
-        position: absolute;
-        height: 33px;
-        width: 34px;
-        border-radius: 50%;
-        margin-left: 48%;
-        background-color: #484848;
-        border: 3px solid #bd0000;
-        margin-top: -230px;
-    }
-
-    #cercle_3 
-    {
-        position: absolute;
-        height: 33px;
-        width: 34px;
-        border-radius: 50%;
-        margin-left: 30%;
-        background-color: #484848;
-        border: 3px solid #bd0000;
-        margin-top: -285px;
-    }
-
-    #cercle_2 .line 
-    {
-        height: 170px;
-        margin-top: -70px; 
-    }
-
-    #cercle_3 .line 
-    {
-        height: 170px;
-        margin-top: -70px; 
-        visibility: visible;
-    }
-
-    .agencement_cadre_2 
-    {
-        margin-top: 0px;
-    }
-
-    .agencement_cadre_3 
-    {
-        margin-top: 0px;
-    }
-
-    .agencement_cadre_4 
-    {
-        margin-top: 0;
-    }
-
-    #formations .agencement_cadre_1 .couleur_de_fond 
-    {
-        padding-left: 20px;
-        margin-top: -85px;
-        text-align: start;
-    }
-
-    .titre_formations .positionnement_1 .col-md-3 
-    {
-        margin-top: -30px;
-    }
-
-    #formations .positionnement_1 .couleur_de_fond 
-    {
-        margin-top: -40px;
-        margin-left: 0px;
-        text-align: left;
-    }
-
-    #formations .agencement_cadre_1 
-    {
-        margin-top: 55px;
-        margin-right: 0px;
-    }
-
-    #formations #cercle_2 
-    {
-        position: absolute;
-        height: 33px;
-        width: 34px;
-        border-radius: 50%;
-        margin-left: 55%;
-        background-color: #484848;
-        border: 3px solid #bd0000;
-        margin-top: -235px;
-    }
-
-    #formations #cercle_1 .line  
-    {
-        height: 170px;
-        margin-top: 0px;
-        visibility: visible;
-    }
-
-    #formations div.col-md-3 
-    {
-        float: right;
-        margin-left: unset;
-        margin-right: 90px;
-        margin-top: 30px;
-    }
-
-    #formations .agencement_cadre_1 
-    {
-        margin-top: 0px;
-        margin-left: 90px;
-    }
-
-    #formations .agencement_cadre_2
-    {
-        margin-top: 0px;
-    }
-
-    #formations .agencement_cadre_3 
-    {
-        margin-top: 50px;
-        margin-left: 90px;
-    }
-
-    #formations .agencement_cadre_4 
-    {
-        margin-top: 0px;
-    }
-
-    #formations .agencement_cadre_5 
-    {
-        margin-top: 50px;
-    }
-
-    #formations .agencement_cadre_6 
-    {
-        margin-top: 0px;
-    }
-
-    #experiences .couleur_de_fond 
-    {
-        margin-top: -160px;
-        padding-right: 20px;
-        margin-right: 0px;
-        margin-left: 90px;
-    }
-
-    #experiences .positionnement_1 .couleur_de_fond 
-    {
-        margin-top: -40px;
-        margin-left: 0px;
-        text-align: left;
-    }
-
-    #experiences .agencement_cadre_1 
-    {
-        margin-top: 55px;
-        margin-right: 0px;
-    }
-
-    #experiences #cercle_2 
-    {
-        position: absolute;
-        height: 33px;
-        width: 34px;
-        border-radius: 50%;
-        margin-left: 55%;
-        background-color: #484848;        
-        margin-top: -235px;
-    }
-
-    #experiences #cercle_1 .line  
-    {
-        height: 170px;
-        margin-top: 0px;
-        visibility: visible;
-    }
-
-    #experiences div.col-md-3 
-    {
-        float: right;
-        margin-left: unset;
-        margin-right: 90px;
-        margin-top: 30px;
-    }
-
-    #experiences .agencement_cadre_1 
-    {
-        margin-top: 0px;
-        margin-left: 90px;
-    }
-
-    #experiences .agencement_cadre_2 
-    {
-        margin-top: 0px;
-    }
-
-    #experiences .agencement_cadre_3 
-    {
-        margin-top: 50px;
-        margin-left: 90px;
-    }
-
-    #experiences .agencement_cadre_4 
-    {
-        margin-top: 0px;
-    }
-
-    #experiences .agencement_cadre_5 
-    {
-        margin-top: 50px;
-    }
-
-    #experiences .agencement_cadre_6 
-    {
-        margin-top: 0px;
-    }
-
-    /*Contact*/
-    .contact 
-    {
-        margin-left: 0%;
+        margin-right: 23%;
+        margin-left: 23%;
+        border: none;
     }
 }
 
 @media (max-width: 675px)
 {
-    .open>.dropdown-menu 
+    /*Blocs*/
+    .container 
     {
-        margin-left: -1%;
+        width: 75%;
     }
 
-    /*Titre contact*/
-    .contact 
+    /*Titre de niveau III*/
+    h3
     {
-        margin-left: 0%;
+        font-size: 55px;
     }
-    
+
+    /*Lignes rouges titres*/
+    h3:before, h3:after 
+    {
+        display: none;
+    }
+
+    /*Titre contact*/   
     #nom, #email, textarea, #cadre
     {
         font-size: 15px;
@@ -10584,45 +9469,12 @@ footer p
 
     textarea 
     {
-        width: 280px;
+        width: 372px;
     }
 
     #message 
     {
         margin-left: -235px;
-    }
-
-    #envoie 
-    {
-        margin-left: -60px;
-    }
-
-    #envoie 
-    {
-        margin-left: -55px;
-    }
-
-    /**/
-    #erreur 
-    {
-        margin-left: -100px;
-    }
-}
-
-@media (max-width: 568px)
-{
-    /*Titre */
-    .texte_menu_header 
-    {
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 555px)
-{
-    .open>.dropdown-menu 
-    {
-        margin-left: -14%;
     }
 }
 
@@ -10634,43 +9486,39 @@ footer p
         letter-spacing: 8px;
     }
 
-    /*Icones Footer*/
-    .icone_3 
+    .contact-form 
     {
-        width: 160px;
-    }
-
-    /*Footer*/
-    footer p 
-    {
-        margin-left: 170px;
+        margin: 50px auto 50px;
+        width: 90%;
     }
 }
 
 @media (max-width: 500px)
 {
-    /*Menu*/
-    .container-fluid 
+    /*Prenom liebe*/
+    .prenom_liebe 
     {
-        padding-right: 0px;
-        padding-left: 0px;
+        font-size: 50px;
     }
 
+    .textes_accroche 
+    {
+        margin-top: 0px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /*Menu*/
     .navbar-inverse .navbar-brand 
     {
         margin-top: 10px;
         margin-right: 0px;
     }
 
-    .navbar-inverse 
+    .navbar-inverse
     {
         padding-right: 0%;
-    }
-
-    .btn
-    {
-        padding: 6px 30%;
-        margin-top: 10px;
+        padding-bottom: 200px;
     }
 
     .dropdown, .dropup 
@@ -10685,9 +9533,31 @@ footer p
         margin-top: -30px;
     }
 
-    #logo
+    .open>.dropdown-menu 
     {
-        margin-left: 40px;
+        margin-left: 30%;
+    }
+
+    /*Logo*/
+    #logo 
+    {
+        margin-left: 35%;
+    }
+
+    /*Texte Guillaume Liebe*/
+    .texte_menu_header 
+    {
+        margin-top: 200px;
+        margin-left: -48%;
+        text-align: center;
+        font-size: 33px;
+    }
+
+    .phrase_accroche 
+    {
+        font-size: 30px;
+        padding-top: 520px;
+        letter-spacing: 1px;
     }
 
     .col-md-8 
@@ -10696,12 +9566,6 @@ footer p
     }
 
     /*Textes d'accroche bandeau*/
-    .textes_accroche 
-    {
-        margin-top: 0px;
-        margin-top: -70px;
-    }
-
     .textes_accroche p 
     {
         line-height: 150%;
@@ -10716,19 +9580,16 @@ footer p
         line-height: 36px;
     }
 
-    /*Curriculum Vitae*/
-    .moins
+    .col-md-8 h3 
     {
-        padding-top: 18px;
-        padding-bottom: 18px;
+        padding-top: 200px;
     }
 
     /*Titre de niveau III*/
     h3 
     {
-        letter-spacing: 8px;
-        margin-top: -70px;
-        font-size: 46px;
+        letter-spacing: 10px;
+        font-size: 45px;
     }
 
     /*Titre de niveau V*/
@@ -10739,39 +9600,7 @@ footer p
 
     /*Paragraphes cadres*/
     p {
-        font-size: 22px;
-        line-height: 28px;
-    }
-
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
-    {
-        margin-top: -220px;
-        margin-bottom: -700px;
-    }
-
-    #galaxie 
-    {
-        margin-top: 0;
-        margin-bottom: -800px;
-    }   
-  
-    #desert 
-    {
-        margin-top: -90%;
-        margin-bottom: -800px;
-    }
-        
-    #thailande_rochers 
-    {
-        margin-top: 100px;
-        margin-bottom: -1050px;
-    }
-
-    #cascade 
-    {
-        margin-top: 50%;
-        margin-bottom: -2350px;
+        font-size: 20px;
     }
 
     /*PORTFOLIO*/
@@ -10783,8 +9612,8 @@ footer p
         padding-left: 5px;
         padding-right: 5px;
         margin-right: -3px;
-        margin-right: 20%;
-        margin-left: 20%;
+        margin-right: 15%;
+        margin-left: 15%;
     }
 
     /*Agrandissement d'images galaxy tacos*/
@@ -12245,193 +11074,107 @@ footer p
         margin-left: 7%;
     }
 
-    /*Scrolls sur les pages*/
-    #page-1
+    /*Titre de niveau VI*/
+    h6 
     {
-        margin-top: 400px;
+        font-size: 180%;
     }
 
-    #page-2, #page-3, #page-4, #page-5
+    /*Container tarifs*/
+    .container-fluid-tarifs .row 
     {
-        margin-top: 350px;
-    }
-
-    #page-6 
-    {
-        margin-top: 1300px;
-        margin-bottom: -810px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    .couleur_de_fond 
-    {
-        font-size: 23px;
-        line-height: 35px;
-    }
-
-    #cercle_1 
-    {
-        margin-top: -120px;
-    }
-
-    #cercle_2 
-    {
-        margin-left: 46%;
-        margin-top: -45%;
-    }
-   
-    #cercle_3 
-    {
-        margin-left: 15%;
-        margin-top: -268px;
-    }   
-
-    #cercle_2 .line 
-    {
-        height: 250px;
-        margin-top: -100px;
-    }
-
-    .container
-    {
-        margin-top: 50px;
         width: 100%;
     }
 
-    .positionnement_1 .col-md-3 
+    .container-fluid-tarifs img 
     {
-        text-align: start;
-        margin-top: 62px;
+        width: 100%;
     }
 
-    .positionnement_1 .couleur_de_fond 
+    /*Système container*/
+    .container
     {
-        padding-right: 10px;
+        width: 100%;
     }
 
-    .positionnement_2 .couleur_de_fond 
+    /*Flex icônes Compétences*/
+    .flex_icones_textes 
     {
-        padding-right: 10px;
+        flex-direction: column;
     }
 
-    #competences #cercle_1 
+    .flex_icones_textes img 
     {
-        margin-top: -145px;
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: unset;
     }
 
-    #competences #cercle_2 
+    .flex_icones_textes p 
     {
-        margin-top: -230px;
-        margin-left: 70%;
-    }
-
-    .positionnement_1 #cercle_2 
-    {
-        margin-top: -20px;
-    }
-
-    .agencement_cadre_2 
-    {
-        margin-top: 0px;
-    }
-
-    .agencement_cadre_3 
-    {
-        margin-top: 15px;
-    }
-
-    #formations .agencement_cadre_1 .couleur_de_fond 
-    {
-        margin-top: -85px;
-        text-align: start;
-        padding-left: 20px;
-    }
-
-    #formations div.col-md-3 
-    {
-        float: right;
-        margin-left: -90px;
-        margin-right: 0px;
-        margin-top: 30px;
-    }
-
-    #experiences .agencement_cadre_1 .couleur_de_fond 
-    {
-        margin-top: -85px;
-        text-align: start;
-        padding-left: 20px;
-    }
-
-    #experiences div.col-md-3 
-    {
-        float: right;
-        margin-left: -90px;
-        margin-right: 0px;
-        margin-top: 30px;
+        text-align: center;
     }
 
     /*Formulaire de contact*/
-    #nom, #email, textarea, #cadre 
+    textarea 
     {
-        font-size: 25px;
+        width: 372px;
+        height: 250px;
     }
 
-    /*Icone name*/
-    .fa-user:before 
-    {
-        margin-left: 115px;
-    }
-
-    /*Icone email*/
-    .fa-at:before 
-    {
-        margin-left: 40px;
-    }
-
-    /*Icone message*/
-    .fa-envelope:before 
-    {
-        margin-left: 55px;
-    }
-
-    /*Icone envoyer*/
-    .fa-telegram-plane:before 
-    {
-        margin-left: -110px;
-        margin-top: 25px;
-    }
-
-    /*Cadre envoyer*/
-    #cadre 
-    {
-        margin-left: -120px;
-    }
-
-    /*Icones Footer*/
-    .icone_2 
-    {
-        margin-left: -144px;
-    }
-
-    .icone_3 
-    {            
-        width: 200px;
-        margin-left: -144px;
-    }
-    
     /*Footer*/
-    footer p 
+    .agencement_icones 
     {
-        margin-left: 177px;
+        margin-left: 30px;
+    }
+
+    /*Mentions Légales*/
+    #mentions 
+    {
+        margin-top: 500px;
     }
 }
 
 @media (max-width: 425px)
 {
-    /*Corps de page*/
-    body
+    /*Logo*/
+    #logo 
     {
-        width: 136.5%;
+        margin-left: 32%;
+        height: 175px;
+    }
+
+    /*prenom liebe*/
+    .prenom_liebe 
+    {
+        margin-bottom: -40px;
+    }
+
+    a 
+    {
+        font-size: 20px;
+    }
+
+    .texte_menu_header 
+    {
+        margin-top: 200px;
+        margin-left: -35%;
+        margin-right: 20px;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .bloc-1, .bloc-2, .bloc-3 
+    {
+        padding: 20px 20px 20px;
+    }
+
+    /*Bandeau d'accueil*/
+    .bandeau_accueil 
+    {
+        position: relative;
+        margin-bottom: 950px;
     }
 
     /*Menu*/
@@ -12441,62 +11184,43 @@ footer p
         margin-right: 0px;
     }
 
-    .btn 
-    {
-        padding: 6px 31%;
-        margin-top: 200px;
-    }
-
     .dropdown, .dropup 
     {
         margin-left: 85px;
     }
 
-    .dropdown-menu>li>a 
-    {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .open>.dropdown-menu 
-    {
-        margin-left: 17.5%;
-    }
-
-    .sous_deroulant 
-    {
-        margin-left: 183px;
-    }
-
     .col-md-8 
     {
-        margin-top: -650px;
+        margin-top: -350px;
     }
 
     .col-md-8 h3 
     {
-        padding-top: 550px;
+        padding-top: 400px;
     }
 
-    /*Titre menu Header*/
-    .texte_menu_header 
+    /*Images d'icones*/
+    img 
     {
-        margin-left: 200px;
-        margin-right: -100px;
+        width: 110px;
     }
 
-    /*Textes d'accroches bandeau*/
-    .textes_accroche 
+    /*Bouton visualiser*/
+    #bouton_visualiser 
     {
-        margin-top: -30px;
+        font-size: 15px;
+        border-radius: 35px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
-    /*Titre Guillaume LIEBE*/
-    .bienvenue h3 
+    #bandeau_projets 
     {
-        font-size: 120%;
+        margin-top: -100px; 
+        margin-bottom: -150px;
     }
 
+    /*Textes d'accroche*/
     .textes_accroche p 
     {
         line-height: 150%;
@@ -12504,48 +11228,18 @@ footer p
         margin-left: 15px;
         margin-right: 15px;
     }
-    
-    /*Cadre Curriculum Vitae*/
-    #curriculum_vitae 
+
+    /*Titre de niveau II*/
+    h2 
     {
-        margin-right: -5px;
+        font-size: 30px;
     }
 
-    #bouton_moins 
-    {
-        position: absolute;
-        right: 5.5px;
-    }
-
-    .moins 
-    {
-        padding-top: 14px;
-        padding-bottom: 14px;
-    }
-
-    #bouton_plus 
-    {
-        position: absolute;
-        right: -155px;
-    }
-
-    .plus 
-    {
-        padding-top: 15px;
-        padding-bottom: 13px;
-    }
-
-    #informations 
-    {
-        position: absolute;
-        right: -150px;
-    }
-    
     /*Titre de niveau III*/
     h3 
     {
-        letter-spacing: 8px;
-
+        letter-spacing: 10px;
+        font-size: 55px;
     }
 
     /*Titre de niveau V*/
@@ -12554,495 +11248,137 @@ footer p
         font-size: 40px;
     }
 
-    /*Grandes photos de séparations des contenus*/
-    #immeuble 
+    /*PORTFOLIO*/
+    button 
     {
-        margin-bottom: -1000px;
-        margin-top: -220px;
+        font-size: 18px;
     }
 
-    #galaxie
+    #digital_arts, #production_videos
     {
-        margin-bottom: -1100px;
-    }   
-  
-    #desert 
-    {
-        margin-top: -60%;
-        margin-bottom: -650px;
+        margin-top: -800px;
     }
-    
-    #thailande_rochers 
-    {
-        margin-top: 200px;
-    }
-
-    #cascade 
-    {
-        margin-top: 100%;
-        margin-bottom: -480%;
-    }
-
-    /*Scrolls sur les pages*/
-    #page-1 
-    {
-        margin-top: 450px;
-        margin-bottom: -200px;
-    }
-
-    #page-2
-    {
-        margin-top: 700px;
-        margin-bottom: -475px;
-    }
-
-    #page-3
-    {
-        margin-top: 200px;
-        margin-bottom: -225px;
-    }
-
-    #page-4 
-    {
-        margin-top: 200px;
-        margin-bottom: -225px;
-    }
-
-    #page-5 
-    {
-        margin-top: 150px;
-        margin-bottom: 210px;
-    }
-
-    #page-6 
-    {
-        margin-top: 1695px;
-        margin-bottom: -700px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    
-    .couleur_de_fond 
-    {
-        font-size: 23px;
-        line-height: 35px;
-    }
-
-    #cercle_1 
-    {
-        margin-left: 69%;
-    }
-
-    #cercle_2 
-    {
-        margin-left: 47.2%;
-        margin-top: -40%;
-    }
-
-    #cercle_3 
-    {
-        margin-left: 23%;
-    }
-
-    #cercle_2 .line 
-    {
-        height: 250px;
-        margin-top: -100px;
-    }
-
-    .container
-    {
-        margin-top: 50px;
-        width: 100%;
-    }
-
-    #competences #cercle_1 
-    {
-        margin-left: 67%;
-    }
-
-    .positionnement_1 .col-md-3 
-    {
-        text-align: start;
-        margin-top: 62px;
-    }
-
-    #competences #cercle_2 
-    {
-        margin-top: -230px;
-        margin-left: 70%;
-    }
-
-    #formations .positionnement_1 .couleur_de_fond
-    {
-        margin-top: -40px;
-        margin-left: 0px;
-        text-align: left;
-    }
-
-    #experiences .positionnement_1 .couleur_de_fond
-    {
-        margin-top: -40px;
-        margin-left: 0px;
-        text-align: left;
-    }
-
-    .positionnement_1 #cercle_2 
-    {
-        margin-top: -20px;
-    }
-
-    .agencement_cadre_2 
-    {
-        margin-top: 0px;
-    }
-
-    #formations .agencement_cadre_1 .couleur_de_fond 
-    {
-        margin-top: -85px;
-        text-align: start;
-        padding-left: 20px;
-    }
-
-    #formations .agencement_cadre_5 .couleur_de_fond 
-    {
-        padding-right: 70px;
-    }  
-
-    .titre_experiences 
-    {
-        margin-top: -150px;
-    }
-
-    #experiences .agencement_cadre_1 .couleur_de_fond 
-    {
-        margin-top: -85px;
-        text-align: start;
-        padding-left: 20px;
-    }
-
-    #experiences .agencement_cadre_5 .couleur_de_fond 
-    {
-        padding-right: 70px;
-    }  
 
     /*Tailles des cadres*/
-    p {
-        font-size: 26px;
-        line-height: 36px;
+    p 
+    {
+        font-size: 20px;
+        line-height: 30px;
     }
 
-    /*Titre contact*/
-    .contact 
+    #bandeau_competences, #bandeau_tarifs, #bandeau_contact
     {
-        margin-left: 0%;
+        margin-bottom: -60px;
     }
 
     /*Formulaire de contact*/
-    #formulaire_contact 
+    form 
     {
-        margin-right: 23%;
-        margin-bottom: 100px;
+        padding-left: 20px;
     }
 
-    form p 
-    {
-        margin-left: -250px;
-    }
-
-    #message 
-    {
-        margin-left: -305px;
-    }
-    
-    textarea 
-    {
-        width: 380px;
-    }
-
-    tbody 
+    .contact-coordonnees 
     {
         margin-top: 0px;
     }
 
-    /*Message envoyer formulaire rempli*/
-    #envoie 
+    /*Footer*/
+    .agencement_footer a 
     {
-        margin-left: -6px;
+        font-size: 15px;
     }
 
-    /*Message d'erreur formulaire non rempli*/
-    #erreur 
+    .agencement_footer p 
     {
-        margin-right: -100px;
-        margin-left: -108px;
-        padding-left: 65px;
-    }
-}
-
-@media (max-width: 422px)
-{
-    /*Menu*/
-    .open>.dropdown-menu 
-    {
-        margin-left: -2%;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
-    .dropdown-menu>li>a 
+    /*Mentions Légales*/
+    #mentions 
     {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin-top: 450px;
     }
 }
 
 @media (max-width: 375px)
 {
-    /*Menu*/
-    .open>.dropdown-menu 
+    /*Logo LG*/
+    #logo 
     {
-        margin-left: -10%;
+        margin-left: 28%;
     }
 
-    .dropdown-menu>li>a 
+    /*Titre de niveau III*/
+    h3 
     {
-        padding-left: 25px;
-        padding-right: 25px;
+        letter-spacing: 5px;
     }
 
-    .sous_deroulant 
+    /*Bandeau d'accueil*/
+    .bandeau_accueil 
     {
-        margin-left: 203px;
+        margin-bottom: 1100px;
     }
 
-    /*Corsp de page*/
-    body
+    /*Footer*/
+    footer p 
     {
-        width: 143.5%;
-    }
-
-    /*Cadre Curriculum Vitae*/
-    #bouton_plus 
-    {
-        position: absolute;
-        right: -163px;
-    }
-
-    #bouton_moins 
-    {
-        position: absolute;
-        right: -3px;
-    }
-
-    #informations 
-    {
-        position: absolute;
-        right: -158px;
-    }
-
-    /*Grandes photos de séparations des contenus*/
-    #desert 
-    {
-        margin-top: -70%;
-        margin-bottom: -650px;
-    }
-
-    #thailande_rochers 
-    {
-        margin-top: 375px;
-    }
-
-    #cascade 
-    {
-        margin-top: 140%;
-        margin-bottom: -550%;
-    }
-
-    /*Scrolls sur les pages*/
-    #page-6
-    {
-        margin-top: 1870px;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    #cercle_1 
-    {
-        margin-left: 72%;
-    }
-
-    #cercle_2 
-    {
-        margin-left: 47%;
-        margin-top: -43%;
-    }
-   
-    #cercle_3 
-    {
-        margin-left: 19%;
-    }
-
-    #competences #cercle_1 
-    {
-        margin-left: 72%;
-    }
-
-    .agencement_cadre_2
-    {
-        margin-left: 0;
-    }
-
-    #formations .positionnement_1 .couleur_de_fond 
-    {
-        margin-top: -40px;
-        margin-left: 0px;
-        text-align: left;
-    }
-
-    #formations .agencement_cadre_5 .couleur_de_fond 
-    {
-        padding-right: 10px;
-    }
-
-    #experiences .positionnement_1 .couleur_de_fond 
-    {
-        margin-top: -40px;
-        margin-left: 0px;
-        text-align: left;
-    }
-
-    #experiences .agencement_cadre_5 .couleur_de_fond 
-    {
-        padding-right: 10px;
-    }
-
-    tbody 
-    {
-        padding-left: 145px;
-        padding-top: 60px;
-        padding-right: 57px;
-    }
-
-    #envoie 
-    {
-        margin-left: -5px;
-        margin-right: -20px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 }
 
 @media (max-width: 320px)
 {
-    /*Corps de page*/
-    body
+    /*Logo LG*/
+    #logo 
     {
-    width: 168.4%;
+        margin-left: 32%;
+        background-size: 130px;
     }
 
-    /*Cadre Curriculum Vitae*/
-    #bouton_plus 
+    /*Prenom nom*/
+    .prenom_liebe 
     {
-        position: absolute;
-        right: -220px;
+        font-size: 40px;
+        margin-top: -20px;
     }
 
-    #bouton_moins 
+    /*Bandeau d'accueil*/
+    .bandeau_accueil 
     {
-        position: absolute;
-        right: -57.5px;
+        margin-bottom: 1200px;
     }
 
-    #informations 
+    /*Titre de niveau III*/
+    h3 
     {
-        position: absolute;
-        right: -214px;
+        font-size: 45px;
     }
 
-    /*Grandes photos de séparations des contenus*/
-    #desert
-    {
-        margin-top: -70%;
-        margin-bottom: -650px;
-    }
-
-    #thailande_rochers 
-    {
-        margin-top: 430px;
-    }
-
-    #cascade
-    {
-        margin-top: 140%;
-    }
-
-    /*Système de cadres + cercles + lignes*/
-    #cercle_1 
-    {
-        margin-left: 84%;
-    }
-
-    #cercle_2 
-    {
-        margin-left: 47%;
-        margin-top: -43%;
-    }
-
-    #cercle_3 
+    /*Menu*/
+    .open>.dropdown-menu 
     {
         margin-left: 20%;
-        margin-top: -71%;
     }
 
-    .position 
+    /*Mentions Légales*/
+    #mentions 
     {
-        margin-top: -30px;
+        margin-top: 450px;
     }
 
-    #competences #cercle_1 
+    /*Icones footer*/
+    .icone_1, .icone_2, .icone_3  
     {
-        margin-left: 83%;
-        margin-top: -50%;
+        width: 160px;
     }
 
-    #competences #cercle_2 
+    .agencement_icones 
     {
-        margin-left: 85%;
-    }
-
-    .positionnement_1 #cercle_2 
-    {
-        margin-top: 0px;
-    }
-
-    .positionnement_1 .col-md-3 
-    {
-        margin-top: 45px;
-    }
-
-    .agencement_cadre_1
-    {
-        margin-right: 0;
-    }
-
-    .agencement_cadre_3 
-    {
-        margin-top: 30px;
-    }
-
-    /*Titre contact*/
-    .contact 
-    {
-        margin-left: 0%;
-    }
-
-    /*Formulaire de contact*/
-    #envoie 
-    {
-        margin-left: -5px;
-        margin-right: -120px;
-    }
-
-    #erreur 
-    {
-        margin-right: -100px;
-        margin-left: -50px;
-        padding-left: 0px;
+        margin-left: 50px;
     }
 }
